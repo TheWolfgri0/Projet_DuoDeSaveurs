@@ -1,6 +1,6 @@
 //Maya ASCII 2022 scene
 //Name: Banc_001.ma
-//Last modified: Mon, Apr 29, 2024 04:52:31 PM
+//Last modified: Mon, Apr 29, 2024 06:27:43 PM
 //Codeset: 1252
 requires maya "2022";
 requires "mtoa" "5.0.0.4";
@@ -10,18 +10,18 @@ fileInfo "product" "Maya 2022";
 fileInfo "version" "2022";
 fileInfo "cutIdentifier" "202303271415-baa69b5798";
 fileInfo "osv" "Windows 10 Education v2009 (Build: 19044)";
-fileInfo "UUID" "13D2E0BC-4BD1-4CA2-1036-849B888A5797";
+fileInfo "UUID" "526C384F-4945-54C9-EE09-D39F7841722A";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "39AA8D88-4145-E105-C57E-35803BC72DC2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 14.801278564206704 6.1964347214736506 -0.77221869162280066 ;
+	setAttr ".t" -type "double3" 26.221057559630911 9.0731705223701198 -0.65262667405208419 ;
 	setAttr ".r" -type "double3" -14.138352732402263 -630.59999999984541 1.5186307543087303e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "75FFCA82-4C42-AEAE-A3EE-7CB31BAD7055";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 16.219598636273393;
+	setAttr ".coi" 27.996748691492954;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
