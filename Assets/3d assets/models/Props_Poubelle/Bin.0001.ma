@@ -1,6 +1,6 @@
 //Maya ASCII 2022 scene
 //Name: Bin.0001.ma
-//Last modified: Tue, Apr 30, 2024 02:02:27 PM
+//Last modified: Tue, Apr 30, 2024 02:04:54 PM
 //Codeset: 1252
 requires maya "2022";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandardSurface"
@@ -11,13 +11,13 @@ fileInfo "product" "Maya 2022";
 fileInfo "version" "2022";
 fileInfo "cutIdentifier" "202303271415-baa69b5798";
 fileInfo "osv" "Windows 10 Education v2009 (Build: 19044)";
-fileInfo "UUID" "8BB62988-4184-60B9-BED3-1EBE8D6D4E5B";
+fileInfo "UUID" "0E64D05B-4D13-76D4-0672-4A832F8E2346";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "D8E0685A-447D-9DF9-D0E1-639B242ED1C1";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.3446806513604166 5.9479569569314528 11.355011116661498 ;
-	setAttr ".r" -type "double3" -15.338352752491613 -3975.399999997328 0 ;
+	setAttr ".t" -type "double3" 3.7985481526034359 6.7890204111492114 10.754374203213668 ;
+	setAttr ".r" -type "double3" -19.538352752496351 -3938.9999999972306 1.27756320903812e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C2A59A68-4A14-F5C6-E75E-538697E7D449";
 	setAttr -k off ".v" no;
