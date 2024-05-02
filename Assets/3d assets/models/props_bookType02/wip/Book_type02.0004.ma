@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
-//Name: Book_type02.0003.ma
-//Last modified: Thu, May 02, 2024 11:21:37 PM
+//Name: Book_type02.0004.ma
+//Last modified: Thu, May 02, 2024 11:22:44 PM
 //Codeset: 1252
 requires maya "2023";
 requires -nodeType "floatMath" "lookdevKit" "1.0";
@@ -12,18 +12,18 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202202161415-df43006fd3";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 22631)";
-fileInfo "UUID" "35BE1B3C-4DCE-4A18-EFA9-CDB5F2E1A58B";
+fileInfo "UUID" "97EF69FD-4407-F534-015A-7F889F9AF0F4";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "E58BEDFB-47F2-5E6D-C6AE-C884446DACB8";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 4.6435084759661436 3.7198080223158652 16.443986653131134 ;
+	setAttr ".t" -type "double3" 3.7951471539999431 3.515368422854269 13.598215180103711 ;
 	setAttr ".r" -type "double3" 356.06164727043313 -703.39999999987572 2.0742980796684826e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C465E986-4A4C-79EA-4313-B29D6FB5F12C";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 17.508696591785437;
+	setAttr ".coi" 14.5321335134797;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -10739,7 +10739,7 @@ createNode displayLayer -n "pasted__lyr_jnt";
 	setAttr ".c" 5;
 	setAttr ".do" 1;
 createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
-	rename -uid "6AE42E9D-4975-490D-4BA9-4AB945D3458A";
+	rename -uid "37265D56-451B-7749-C1B3-2596D252AE8C";
 	setAttr -s 6 ".tgi";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -1790.0182438893835 -340.47617694688273 ;
@@ -13385,4 +13385,4 @@ connectAttr "|PageGrp_R|GEOpageR|GEOpageRShape.iog" ":initialShadingGroup.dsm" -
 		;
 connectAttr "|PageGrp_R|ribbon|L1|LShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "|PageGrp_R|ribbon|R1|RShape1.iog" ":initialShadingGroup.dsm" -na;
-// End of Book_type02.0003.ma
+// End of Book_type02.0004.ma
