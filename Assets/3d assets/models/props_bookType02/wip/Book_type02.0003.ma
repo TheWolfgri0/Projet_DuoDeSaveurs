@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Book_type02.0003.ma
-//Last modified: Thu, May 02, 2024 08:02:16 PM
+//Last modified: Thu, May 02, 2024 10:47:53 PM
 //Codeset: 1252
 requires maya "2023";
 requires -nodeType "floatMath" "lookdevKit" "1.0";
@@ -12,22 +12,22 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202202161415-df43006fd3";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 22631)";
-fileInfo "UUID" "CBDA8E43-4D4B-5506-2E1C-2492A8020836";
+fileInfo "UUID" "83C05023-40D3-D3FE-926F-46BA1E83612D";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "E58BEDFB-47F2-5E6D-C6AE-C884446DACB8";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.138933118293771 11.666103250226989 24.995882589618429 ;
-	setAttr ".r" -type "double3" -24.93835272895177 -702.99999999994293 8.3146995286600453e-16 ;
+	setAttr ".t" -type "double3" 7.9852926577597465 10.399401582261875 21.227763159063649 ;
+	setAttr ".r" -type "double3" -21.338352729673485 -701.79999999973097 8.3701269852197549e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C465E986-4A4C-79EA-4313-B29D6FB5F12C";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 26.81019029474411;
+	setAttr ".coi" 16.659960480215268;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0.0032792114870492384 2.7861685325648615 0.86491058380454344 ;
+	setAttr ".tp" -type "double3" -3.1006889882491628 1.0782148544610968 6.2956769203865139 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "A3B9EA59-44BB-B592-F072-DA8C8850D8BF";
@@ -300,17 +300,17 @@ createNode mesh -n "pageShape" -p "page";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
-createNode transform -n "PageGrp_L1";
+createNode transform -n "PageGrp_R";
 	rename -uid "463ED2DE-4A3C-3731-E18D-51BD3BF66AFC";
 	setAttr ".s" -type "double3" -1 1 1 ;
 	setAttr ".rp" -type "double3" 1.8291275827317062 3.0377314900498296 0.86491058380454344 ;
 	setAttr ".sp" -type "double3" -1.8291275827317062 3.0377314900498296 0.86491058380454344 ;
 	setAttr ".spt" -type "double3" 3.6582551654634123 0 0 ;
-createNode transform -n "GEOpageR" -p "PageGrp_L1";
+createNode transform -n "GEOpageR" -p "PageGrp_R";
 	rename -uid "85BB4D04-418A-F65A-D02C-DC84B5A38C14";
 	setAttr ".rp" -type "double3" -0.12961411352113772 2.8813543319702148 0.0053241252899169922 ;
 	setAttr ".sp" -type "double3" -0.12961411352113772 2.8813543319702148 0.0053241252899169922 ;
-createNode mesh -n "GEOpageRShape" -p "|PageGrp_L1|GEOpageR";
+createNode mesh -n "GEOpageRShape" -p "|PageGrp_R|GEOpageR";
 	rename -uid "F686A90B-4F81-6195-DF1E-D3A177B2E111";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -323,7 +323,7 @@ createNode mesh -n "GEOpageRShape" -p "|PageGrp_L1|GEOpageR";
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
-createNode mesh -n "GEOpageRShapeOrig" -p "|PageGrp_L1|GEOpageR";
+createNode mesh -n "GEOpageRShapeOrig" -p "|PageGrp_R|GEOpageR";
 	rename -uid "419C5BFA-4A33-5AD7-C978-17B416A13373";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -941,7 +941,7 @@ createNode mesh -n "GEOpageRShapeOrig" -p "|PageGrp_L1|GEOpageR";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "GEOpageRShapeOrig2" -p "|PageGrp_L1|GEOpageR";
+createNode mesh -n "GEOpageRShapeOrig2" -p "|PageGrp_R|GEOpageR";
 	rename -uid "AE4BF03A-40E9-06D2-09F1-47B7A86B7FED";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -1526,10 +1526,10 @@ createNode mesh -n "GEOpageRShapeOrig2" -p "|PageGrp_L1|GEOpageR";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "ribbon" -p "PageGrp_L1";
+createNode transform -n "ribbon" -p "PageGrp_R";
 	rename -uid "A60C8603-4D16-72FA-6AEF-9A8E14DB92D6";
 	setAttr ".v" no;
-createNode transform -n "L1" -p "|PageGrp_L1|ribbon";
+createNode transform -n "L1" -p "|PageGrp_R|ribbon";
 	rename -uid "C516AB9C-4DDE-A46B-772C-979474FB3D5F";
 	setAttr ".t" -type "double3" -0.23870159193486273 3.3729989327787679 0 ;
 	setAttr -l on ".tx";
@@ -1543,7 +1543,7 @@ createNode transform -n "L1" -p "|PageGrp_L1|ribbon";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
-createNode nurbsSurface -n "LShape1" -p "|PageGrp_L1|ribbon|L1";
+createNode nurbsSurface -n "LShape1" -p "|PageGrp_R|ribbon|L1";
 	rename -uid "1565848B-4273-368B-87F5-8D89761447C6";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -1557,7 +1557,7 @@ createNode nurbsSurface -n "LShape1" -p "|PageGrp_L1|ribbon|L1";
 	setAttr ".cps" 4;
 	setAttr ".nufa" 4.5;
 	setAttr ".nvfa" 4.5;
-createNode nurbsSurface -n "LShape1Orig1" -p "|PageGrp_L1|ribbon|L1";
+createNode nurbsSurface -n "LShape1Orig1" -p "|PageGrp_R|ribbon|L1";
 	rename -uid "9A7280CE-40C8-A31A-4B78-5FA3FB8BA34F";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -1614,7 +1614,7 @@ createNode nurbsSurface -n "LShape1Orig1" -p "|PageGrp_L1|ribbon|L1";
 		0.5 3.061616997868383e-17 -0.5
 		
 		;
-createNode nurbsSurface -n "LShape1Orig" -p "|PageGrp_L1|ribbon|L1";
+createNode nurbsSurface -n "LShape1Orig" -p "|PageGrp_R|ribbon|L1";
 	rename -uid "AC61F554-4B7B-48E9-18FE-169A905D4604";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -1671,7 +1671,7 @@ createNode nurbsSurface -n "LShape1Orig" -p "|PageGrp_L1|ribbon|L1";
 		0.49999993773156637 2.6976121112881613e-05 -0.49999999911641635
 		
 		;
-createNode transform -n "R1" -p "|PageGrp_L1|ribbon";
+createNode transform -n "R1" -p "|PageGrp_R|ribbon";
 	rename -uid "4274CC4E-4DB7-2F76-7721-D689BA7334BE";
 	setAttr ".t" -type "double3" -0.056915648673302843 3.3729989327787679 0 ;
 	setAttr -l on ".tx";
@@ -1685,7 +1685,7 @@ createNode transform -n "R1" -p "|PageGrp_L1|ribbon";
 	setAttr -l on ".sx";
 	setAttr -l on ".sy";
 	setAttr -l on ".sz";
-createNode nurbsSurface -n "RShape1" -p "|PageGrp_L1|ribbon|R1";
+createNode nurbsSurface -n "RShape1" -p "|PageGrp_R|ribbon|R1";
 	rename -uid "CBC1C829-4FCF-7B07-BF99-41862CEFAF61";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -1699,7 +1699,7 @@ createNode nurbsSurface -n "RShape1" -p "|PageGrp_L1|ribbon|R1";
 	setAttr ".cps" 4;
 	setAttr ".nufa" 4.5;
 	setAttr ".nvfa" 4.5;
-createNode nurbsSurface -n "RShape1Orig1" -p "|PageGrp_L1|ribbon|R1";
+createNode nurbsSurface -n "RShape1Orig1" -p "|PageGrp_R|ribbon|R1";
 	rename -uid "FA7170BB-4F81-0931-A4C8-E4A5E1829D99";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -1756,7 +1756,7 @@ createNode nurbsSurface -n "RShape1Orig1" -p "|PageGrp_L1|ribbon|R1";
 		0.5 3.061616997868383e-17 -0.5
 		
 		;
-createNode nurbsSurface -n "RShape1Orig" -p "|PageGrp_L1|ribbon|R1";
+createNode nurbsSurface -n "RShape1Orig" -p "|PageGrp_R|ribbon|R1";
 	rename -uid "1CF8199E-469A-B119-0902-CB87E987CC3C";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -1813,13 +1813,10 @@ createNode nurbsSurface -n "RShape1Orig" -p "|PageGrp_L1|ribbon|R1";
 		0.50000205562343913 -1.649016110466528e-06 -0.49989315392194311
 		
 		;
-createNode transform -n "grp_Jnt_PageGrpL" -p "PageGrp_L1";
+createNode transform -n "grp_Jnt_PageGrpR" -p "PageGrp_R";
 	rename -uid "6EDD5C6D-4662-AFD4-3649-3A8EFB4559C6";
-createNode joint -n "Jnt_PageGroupR_Bot" -p "|PageGrp_L1|grp_Jnt_PageGrpL";
+createNode joint -n "Jnt_PageGroupR_Bot" -p "grp_Jnt_PageGrpR";
 	rename -uid "C8EAC27E-471F-5D6E-FE16-26B1D971712E";
-	setAttr ".ove" yes;
-	setAttr ".ovrgbf" yes;
-	setAttr ".ovrgb" -type "float3" 1 1 0.12597102 ;
 	setAttr ".t" -type "double3" -0.17311892506610085 0 -0.046213661342065171 ;
 	setAttr ".r" -type "double3" -3.840873647674921e-05 0.0034060330103303088 90 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -1841,7 +1838,7 @@ createNode joint -n "joint38" -p "Jnt_PageGroupR_Bot";
 		 3.985048470719467e-11 0.99999999999977529 -6.7035891186558424e-07 0 -5.9446490426851717e-05 6.7035891305007003e-07 0.9999999982328327 0
 		 0.23869884461607882 0.93034057938248149 3.2749156332473328e-06 1;
 	setAttr ".radi" 0.3;
-createNode joint -n "joint39" -p "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38";
+createNode joint -n "joint39" -p "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38";
 	rename -uid "633B4B4D-402B-CD8E-B0C2-41B7E1B21ABD";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 1;
@@ -1855,7 +1852,7 @@ createNode joint -n "joint39" -p "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bo
 		 3.985048470719467e-11 0.99999999999977529 -6.7035891186558424e-07 0 -5.9446490426851717e-05 6.7035891305007003e-07 0.9999999982328327 0
 		 0.23869884468097363 2.5587795022993269 2.1832770888410298e-06 1;
 	setAttr ".radi" 0.3;
-createNode joint -n "joint40" -p "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39";
+createNode joint -n "joint40" -p "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39";
 	rename -uid "947FFF26-470C-7686-E37D-88993C7142D6";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".oc" 2;
@@ -1869,7 +1866,7 @@ createNode joint -n "joint40" -p "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bo
 		 3.985048470719467e-11 0.99999999999977529 -6.7035891186558424e-07 0 -5.9446490426851717e-05 6.7035891305007003e-07 0.9999999982328327 0
 		 0.23869884474586844 4.1872184252161722 1.0916385444347271e-06 1;
 	setAttr ".radi" 0.3;
-createNode joint -n "joint41" -p "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39|joint40";
+createNode joint -n "joint41" -p "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39|joint40";
 	rename -uid "A7CB46D2-4494-FC99-9C4B-6581F3FB3FA4";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -1881,11 +1878,8 @@ createNode joint -n "joint41" -p "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bo
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.23870159193486382 5.8156573171545851 2.7755575615628914e-17 1;
 	setAttr ".radi" 0.3;
-createNode joint -n "Jnt_PageGroupR_top" -p "|PageGrp_L1|grp_Jnt_PageGrpL";
+createNode joint -n "Jnt_PageGroupR_top" -p "grp_Jnt_PageGrpR";
 	rename -uid "F5E5F0D6-4698-3489-EF40-6A897FB9FCE9";
-	setAttr ".ove" yes;
-	setAttr ".ovrgbf" yes;
-	setAttr ".ovrgb" -type "float3" 0.147651 0.147651 0.018599747 ;
 	setAttr ".t" -type "double3" -0.086002417311961843 0 -0.046213661342065171 ;
 	setAttr ".r" -type "double3" -0.00041894973997777139 0.0010027693189076446 80 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -1902,7 +1896,7 @@ createNode joint -n "joint34" -p "Jnt_PageGroupR_top";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.056915648673301761 0.93034054840295077 -2.7755575615628914e-17 1;
 	setAttr ".radi" 0.3;
-createNode joint -n "joint35" -p "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34";
+createNode joint -n "joint35" -p "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34";
 	rename -uid "1C85ADFC-4623-7C12-67AA-25AFABB8AF73";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".ove" yes;
@@ -1913,7 +1907,7 @@ createNode joint -n "joint35" -p "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_to
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.056915648673302482 2.5587794713201619 -2.7755575615628914e-17 1;
 	setAttr ".radi" 0.3;
-createNode joint -n "joint36" -p "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35";
+createNode joint -n "joint36" -p "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35";
 	rename -uid "8DF1B767-4292-F42A-AB23-73B8A05CB71F";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".ove" yes;
@@ -1924,7 +1918,7 @@ createNode joint -n "joint36" -p "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_to
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.056915648673303204 4.1872183942373731 -2.7755575615628914e-17 1;
 	setAttr ".radi" 0.3;
-createNode joint -n "joint37" -p "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35|joint36";
+createNode joint -n "joint37" -p "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35|joint36";
 	rename -uid "A2D5F4CD-4525-27CD-F921-1E900AE93BC0";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
@@ -1936,7 +1930,7 @@ createNode joint -n "joint37" -p "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_to
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.056915648673303926 5.8156573171545851 -2.7755575615628914e-17 1;
 	setAttr ".radi" 0.3;
-createNode transform -n "grp_jnt_ribbon_PageGrp_R_bot" -p "|PageGrp_L1|grp_Jnt_PageGrpL";
+createNode transform -n "grp_jnt_ribbon_PageGrp_R_bot" -p "grp_Jnt_PageGrpR";
 	rename -uid "FC681AF6-495F-564E-3ECA-5FBFA01F36E9";
 	setAttr ".r" -type "double3" 0 180 0 ;
 	setAttr ".s" -type "double3" 1 1 -1 ;
@@ -1949,12 +1943,165 @@ createNode follicle -n "L1FollicleShape50" -p "L1Follicle50";
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint43" -p "L1Follicle50";
+createNode transform -n "grp_off_ctrl_PageGrp_R_p8" -p "L1Follicle50";
+	rename -uid "879E1F1B-4610-9F56-AC7D-CB8D6E4C9142";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".t" -type "double3" 0 -1.6940658945086007e-21 2.7755575615628914e-17 ;
+	setAttr ".r" -type "double3" 0 -89.999999999999972 0 ;
+	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999989 0.99999999999999989 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_R_p1" -p "grp_off_ctrl_PageGrp_R_p8";
+	rename -uid "1E979CD4-4FE4-4FB5-B3F8-859CA8908B7F";
+createNode transform -n "ctrl_PageGrp_R_p4" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle50|grp_off_ctrl_PageGrp_R_p8|grp_cst_ctrl_PageGrp_R_p1";
+	rename -uid "EF5BE22B-461A-BC48-A1F7-B69B536BF183";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 1 0.041082144 0.041082144 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape4" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle50|grp_off_ctrl_PageGrp_R_p8|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4";
+	rename -uid "E0B3BF54-4DD0-0455-D455-8F992B16D2A5";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		;
+createNode joint -n "joint43" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle50|grp_off_ctrl_PageGrp_R_p8|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4";
 	rename -uid "F1750193-44BB-CDEA-E680-BF8C51CA331D";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" -2.7755575615628914e-17 1.011145580784821e-20 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -5.0761403551401184e-10 -89.996593966989678 -89.999961590728489 ;
+	setAttr ".jo" -type "double3" -89.99996159080942 -6.5609840274893195e-20 -0.0034060330103321767 ;
 	setAttr ".bps" -type "matrix" 1 -2.8445358815677351e-17 4.2155135718952019e-17 0
 		 -2.8456879055576752e-17 1 9.3382336255492358e-12 0 4.2155135718952019e-17 -9.3381046446311307e-12 1 0
 		 0.23869884461607882 0.9303405793824826 3.274915633233455e-06 1;
@@ -1969,12 +2116,164 @@ createNode follicle -n "L1FollicleShape1750" -p "L1Follicle1750";
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint44" -p "L1Follicle1750";
+createNode transform -n "grp_off_ctrl_PageGrp_R_p9" -p "L1Follicle1750";
+	rename -uid "F7D80223-44A7-7903-862C-14AAB2009F95";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".t" -type "double3" 0 8.7379918838753623e-18 -9.7144514654701197e-16 ;
+	setAttr ".r" -type "double3" 0 -89.999999999999957 0 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_R_p1" -p "grp_off_ctrl_PageGrp_R_p9";
+	rename -uid "AC9156E2-4642-57E3-26C2-54834064DB3B";
+createNode transform -n "ctrl_PageGrp_R_p4" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle1750|grp_off_ctrl_PageGrp_R_p9|grp_cst_ctrl_PageGrp_R_p1";
+	rename -uid "AFBF988D-4D7A-E88E-891A-2998E7D5A811";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 1 0.041082144 0.041082144 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape4" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle1750|grp_off_ctrl_PageGrp_R_p9|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4";
+	rename -uid "E0E3120D-4808-46AB-12E4-149CFA67114D";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		;
+createNode joint -n "joint44" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle1750|grp_off_ctrl_PageGrp_R_p9|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4";
 	rename -uid "B2AEDBF8-4070-FC70-7391-3A8DF9650E2F";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 1.0824674490095276e-15 -8.7498503451369225e-18 -4.4408920985006262e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 2.1400421644676016e-10 -89.996593966989678 -89.999961591076925 ;
+	setAttr ".jo" -type "double3" -89.999961590969988 2.2832375113945441e-09 -0.0034060330103275215 ;
 	setAttr ".bps" -type "matrix" 1.0000000000000002 -2.8418959857389594e-17 4.2134806928217916e-17 0
 		 -1.6652874598157548e-16 1.0000000000000002 3.2569870156646679e-12 0 -6.88603904799856e-17 -3.2571355635209701e-12 1.0000000000000002 0
 		 0.23869884464852623 1.7445600408409048 2.7290963610093755e-06 1;
@@ -1989,12 +2288,165 @@ createNode follicle -n "L1FollicleShape3350" -p "L1Follicle3350";
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint45" -p "L1Follicle3350";
+createNode transform -n "grp_off_ctrl_PageGrp_R_p10" -p "L1Follicle3350";
+	rename -uid "91B91D47-4D6D-036E-748A-12A9BFBFCEA5";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".t" -type "double3" 0 5.2094220322033979e-17 2.6922908347160046e-15 ;
+	setAttr ".r" -type "double3" 0 -89.999999999999829 0 ;
+	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999989 1 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_R_p1" -p "grp_off_ctrl_PageGrp_R_p10";
+	rename -uid "B32E6F2C-4086-C2F0-572F-1F8F69E9FF13";
+createNode transform -n "ctrl_PageGrp_R_p4" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle3350|grp_off_ctrl_PageGrp_R_p10|grp_cst_ctrl_PageGrp_R_p1";
+	rename -uid "3E2C28E3-406E-C8B4-BDE9-109A19796E6C";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 1 0.041082144 0.041082144 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape4" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle3350|grp_off_ctrl_PageGrp_R_p10|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4";
+	rename -uid "E1B3E264-4311-4E51-3EF0-EA88FBD0F653";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		;
+createNode joint -n "joint45" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle3350|grp_off_ctrl_PageGrp_R_p10|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4";
 	rename -uid "4476AE45-456C-78AD-1951-0DB7C796ED75";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" -2.55351295663786e-15 -5.2082361860772419e-17 8.8817841970012523e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -3.6702738154579237e-16 -89.996593966989678 -89.999961590969917 ;
+	setAttr ".jo" -type "double3" -89.999961590862981 2.2831198308798585e-09 -0.0034060330103275215 ;
 	setAttr ".bps" -type "matrix" 1 8.2583542945027701e-17 4.2155135718952019e-17 0 -2.8017253582024604e-21 1 5.1245486764496862e-12 0
 		 4.2155135718952019e-17 -5.1244196683203836e-12 1 0 0.23869884468097363 2.5587795022993278 2.1832770888408071e-06 1;
 	setAttr ".radi" 0.2;
@@ -2008,12 +2460,163 @@ createNode follicle -n "L1FollicleShape5050" -p "L1Follicle5050";
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint46" -p "L1Follicle5050";
+createNode transform -n "grp_off_ctrl_PageGrp_R_p11" -p "L1Follicle5050";
+	rename -uid "A5C65226-4B84-F4CD-DE42-B5A387A3F8E1";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".t" -type "double3" 0 -5.7137454489986084e-17 -1.5820678100908481e-15 ;
+	setAttr ".r" -type "double3" 0 -89.999999999999929 0 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999989 1 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_R_p1" -p "grp_off_ctrl_PageGrp_R_p11";
+	rename -uid "05702B07-4D33-0C1F-E393-69ADA2233374";
+createNode transform -n "ctrl_PageGrp_R_p4" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle5050|grp_off_ctrl_PageGrp_R_p11|grp_cst_ctrl_PageGrp_R_p1";
+	rename -uid "A4FA1716-4D02-E2B0-ED15-E384B089A926";
+	setAttr ".v" no;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape4" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle5050|grp_off_ctrl_PageGrp_R_p11|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4";
+	rename -uid "2341606F-4383-A626-33CD-71BB0AC8CB90";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		;
+createNode joint -n "joint46" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle5050|grp_off_ctrl_PageGrp_R_p11|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4";
 	rename -uid "65BA520D-4D48-ADD0-C542-A195782A8907";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 1.1657341758564144e-15 5.7144230753564118e-17 4.4408920985006262e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 2.1398958402802529e-10 -89.996593966989678 -89.999961591076939 ;
+	setAttr ".jo" -type "double3" -89.99996159118399 2.2832088864109393e-09 -0.0034060330103275228 ;
 	setAttr ".bps" -type "matrix" 1.0000000000000002 -3.615057039190678e-16 -1.3362791775883842e-17 0
 		 1.1104020985648992e-16 1.0000000000000004 3.2564874183917713e-12 0 -2.9091854793217298e-16 -3.256635969653896e-12 1.0000000000000002 0
 		 0.23869884471342104 3.3729989637577509 1.6374578166444831e-06 1;
@@ -2028,12 +2631,165 @@ createNode follicle -n "L1FollicleShape6650" -p "L1Follicle6650";
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint47" -p "L1Follicle6650";
+createNode transform -n "grp_off_ctrl_PageGrp_R_p12" -p "L1Follicle6650";
+	rename -uid "2435E6D4-4161-FEEC-3609-D88F7F17EE23";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".t" -type "double3" 0 -7.6205860198574893e-17 -1.8318679906315083e-15 ;
+	setAttr ".r" -type "double3" 0 -89.999999999999929 0 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999989 1 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_R_p1" -p "grp_off_ctrl_PageGrp_R_p12";
+	rename -uid "3701885E-42D9-264C-19EB-48973158ED13";
+createNode transform -n "ctrl_PageGrp_R_p4" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle6650|grp_off_ctrl_PageGrp_R_p12|grp_cst_ctrl_PageGrp_R_p1";
+	rename -uid "B4B863E9-4F18-2260-D517-25A2F316C82C";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 1 0.041082144 0.041082144 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape4" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle6650|grp_off_ctrl_PageGrp_R_p12|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4";
+	rename -uid "352175CF-4A82-589B-85C0-7784E8665758";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		;
+createNode joint -n "joint47" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle6650|grp_off_ctrl_PageGrp_R_p12|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4";
 	rename -uid "165AF924-4A1E-1479-9F5A-58A79AD2D1A9";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 2.1926904736346842e-15 7.6177061078368247e-17 2.6645352591003757e-15 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -2.1400199357154201e-10 -89.996593966989678 -89.999961591076911 ;
+	setAttr ".jo" -type "double3" -89.999961590969988 2.2832152475203024e-09 -0.0034060330103275228 ;
 	setAttr ".bps" -type "matrix" 1 -1.3946106177090887e-16 4.2148359455373985e-17 0
 		 5.5502659170056948e-17 1.0000000000000002 3.2569315045134367e-12 0 -6.8867166743563635e-17 -3.2570245477125148e-12 1.0000000000000002 0
 		 0.23869884474586844 4.187218425216173 1.0916385444481591e-06 1;
@@ -2048,12 +2804,165 @@ createNode follicle -n "L1FollicleShape8350" -p "L1Follicle8350";
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint48" -p "L1Follicle8350";
+createNode transform -n "grp_off_ctrl_PageGrp_R_p13" -p "L1Follicle8350";
+	rename -uid "DEA74A39-4445-05B7-B6C9-2AA3A46EE673";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".t" -type "double3" 0 1.5790727015893569e-16 6.7723604502134549e-15 ;
+	setAttr ".r" -type "double3" 0 -89.999999999999815 0 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999989 1 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_R_p1" -p "grp_off_ctrl_PageGrp_R_p13";
+	rename -uid "76FD7177-4272-966A-DD41-D4B8C0C32845";
+createNode transform -n "ctrl_PageGrp_R_p4" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle8350|grp_off_ctrl_PageGrp_R_p13|grp_cst_ctrl_PageGrp_R_p1";
+	rename -uid "B7EBD327-4669-A5C3-E1CE-D4B1989747DC";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 1 0.041082144 0.041082144 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape4" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle8350|grp_off_ctrl_PageGrp_R_p13|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4";
+	rename -uid "094A765E-47E0-5E2C-2D0E-D68C51D54A5B";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		;
+createNode joint -n "joint48" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle8350|grp_off_ctrl_PageGrp_R_p13|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4";
 	rename -uid "34BEC4E2-45CC-4C0F-755E-E7B86F608E33";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" -7.688294445529209e-15 -1.5790557609304118e-16 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -6.7998717183882367e-15 -89.996593966989678 -89.999961591076925 ;
+	setAttr ".jo" -type "double3" -89.999961590969988 2.2830943864253503e-09 -0.0034060330103275224 ;
 	setAttr ".bps" -type "matrix" 1 -2.8438759523950301e-17 4.214158319179595e-17 0 5.5515933363861578e-17 1 3.2568204822109742e-12 0
 		 4.2155135718952019e-17 -3.2568024964018244e-12 1 0 0.23869884477831585 5.0014378866745961 5.4581927222407955e-07 1;
 	setAttr ".radi" 0.2;
@@ -2067,17 +2976,170 @@ createNode follicle -n "L1FollicleShape9950" -p "L1Follicle9950";
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint49" -p "L1Follicle9950";
+createNode transform -n "grp_off_ctrl_PageGrp_R_p14" -p "L1Follicle9950";
+	rename -uid "04A500A6-4C02-1EF3-A730-07839C47E7C6";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".t" -type "double3" 0 -8.7776330258068636e-17 1.7486012637846216e-14 ;
+	setAttr ".r" -type "double3" 0 -89.999999999999673 0 ;
+	setAttr ".s" -type "double3" 0.99999999999999989 1 1.0000000000000002 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_R_p1" -p "grp_off_ctrl_PageGrp_R_p14";
+	rename -uid "7A2F7F18-46C8-D325-6E24-7B83CA8A6BC3";
+createNode transform -n "ctrl_PageGrp_R_p4" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle9950|grp_off_ctrl_PageGrp_R_p14|grp_cst_ctrl_PageGrp_R_p1";
+	rename -uid "7BE82B50-4E62-6943-7966-DFA2026CA48F";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 1 0.041082144 0.041082144 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape4" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle9950|grp_off_ctrl_PageGrp_R_p14|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4";
+	rename -uid "18DD4AB2-430D-F39C-6196-1CA110E57603";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		;
+createNode joint -n "joint49" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle9950|grp_off_ctrl_PageGrp_R_p14|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4";
 	rename -uid "963B5DE5-4C36-D0A5-33B1-CCB2625A6130";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" -1.8374191057546341e-14 8.7793270917013722e-17 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -2.1402435571983781e-10 -89.996593966989678 -89.999961590755916 ;
+	setAttr ".jo" -type "double3" -89.999961590862995 2.2829608031798998e-09 -0.0034060330103275211 ;
 	setAttr ".bps" -type "matrix" 0.99999999999999989 8.2596817746729543e-17 1.531638856543116e-16 0
 		 1.4955755054734054e-20 1.0000000000000002 8.8595609694350116e-12 0 -6.88603904799856e-17 -8.8595430101840944e-12 1 0
 		 0.23869884481076326 5.8156573481330174 2.7755575615628914e-17 1;
 	setAttr ".radi" 0.2;
-createNode transform -n "grp_jnt_ribbon_PageGrp_R_Top" -p "|PageGrp_L1|grp_Jnt_PageGrpL";
+createNode transform -n "grp_jnt_ribbon_PageGrp_R_Top" -p "grp_Jnt_PageGrpR";
 	rename -uid "FE3E2F7D-4964-0437-6BC9-AB93869617A0";
 	setAttr ".r" -type "double3" 0 180 0 ;
 	setAttr ".s" -type "double3" 1 1 -1 ;
@@ -2090,12 +3152,163 @@ createNode follicle -n "R1FollicleShape50" -p "R1Follicle50";
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint50" -p "R1Follicle50";
+createNode transform -n "grp_off_ctrl_PageGrp_R_p1" -p "R1Follicle50";
+	rename -uid "5D213F6E-4397-99E9-0995-D3A2C352DB9C";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".r" -type "double3" 90.001053970488798 89.999734884815823 0 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_R_p1" -p "grp_off_ctrl_PageGrp_R_p1";
+	rename -uid "D7399892-4E2A-D7D8-2B09-3B86A29231BE";
+createNode transform -n "ctrl_PageGrp_R_p1" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_Top|R1Follicle50|grp_off_ctrl_PageGrp_R_p1|grp_cst_ctrl_PageGrp_R_p1";
+	rename -uid "4F3A5A42-4A95-ABAD-E550-9CA01FEE3D64";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 1 0.041082144 0.041082144 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape1" -p "ctrl_PageGrp_R_p1";
+	rename -uid "CA901A44-4D10-472E-EC31-C0A6A5FDB1B3";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		;
+createNode joint -n "joint50" -p "ctrl_PageGrp_R_p1";
 	rename -uid "B3085C45-44B5-ABD4-0AD0-8AAE3C96A0D9";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 90.001053970488783 89.999734884815837 0 ;
+	setAttr ".jo" -type "double3" 6.11728754408437e-15 3.180554681463516e-15 -7.0024126574408796e-15 ;
 	setAttr ".bps" -type "matrix" 0.99999999997789191 4.7778552756320654e-06 -4.624762539863921e-06 0
 		 -4.7778552758857535e-06 0.99999999998858613 2.2096716735288421e-11 0 4.6247625401179098e-06 -9.7983127795581123e-17 0.99999999998930589 0
 		 0.056915722094439715 0.93034139397360249 -1.6979342596784575e-05 1;
@@ -2110,12 +3323,165 @@ createNode follicle -n "R1FollicleShape1750" -p "R1Follicle1750";
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint51" -p "R1Follicle1750";
+createNode transform -n "grp_off_ctrl_PageGrp_R_p2" -p "R1Follicle1750";
+	rename -uid "CF349847-4510-FDCC-84CA-9D965B216500";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".t" -type "double3" 0 -1.6553615710167627e-15 8.3453216559448151e-11 ;
+	setAttr ".r" -type "double3" 90.001053970488798 89.999734884815823 0 ;
+	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999989 0.99999999999999989 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_R_p1" -p "grp_off_ctrl_PageGrp_R_p2";
+	rename -uid "EDE0C0F3-4560-D99D-9053-F9A24EEA977C";
+createNode transform -n "ctrl_PageGrp_R_p2" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_Top|R1Follicle1750|grp_off_ctrl_PageGrp_R_p2|grp_cst_ctrl_PageGrp_R_p1";
+	rename -uid "D94B3832-4BAB-695B-7103-49AD1F6A6C54";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 1 0.041082144 0.041082144 ;
+	setAttr ".t" -type "double3" 0 1.9944515650574437e-16 1.1858461261560205e-20 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape2" -p "ctrl_PageGrp_R_p2";
+	rename -uid "EFE08F26-4CA6-A7EA-2B80-FBAF1BC0CA06";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		;
+createNode joint -n "joint51" -p "ctrl_PageGrp_R_p2";
 	rename -uid "B6D67CD8-4A1E-02DF-5CE3-DF94A6127543";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 8.3453244315023767e-11 -4.4408920985006262e-16 -1.6553531006872901e-15 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 90.001053970488798 89.999734884815823 0 ;
+	setAttr ".jo" -type "double3" 6.3691655774827394e-15 3.1805546814635152e-15 -7.0031981056582289e-15 ;
 	setAttr ".bps" -type "matrix" 0.99999999997789168 4.7778552759096229e-06 -4.6247625397529012e-06 0
 		 -4.7778552758302415e-06 0.99999999998858591 2.2096661223880464e-11 0 4.6247625396738197e-06 -3.20027799650086e-16 0.99999999998930555 0
 		 0.05691559930404809 1.7445608552944381 -3.1957116849556932e-05 1;
@@ -2130,12 +3496,165 @@ createNode follicle -n "R1FollicleShape3350" -p "R1Follicle3350";
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint52" -p "R1Follicle3350";
+createNode transform -n "grp_off_ctrl_PageGrp_R_p3" -p "R1Follicle3350";
+	rename -uid "59BE973B-44F5-219B-C60B-9695A3F9DA0E";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".t" -type "double3" 0 -3.0331970320303901e-15 1.66907321297316e-10 ;
+	setAttr ".r" -type "double3" 90.001053970488826 89.999734884815837 0 ;
+	setAttr ".s" -type "double3" 0.99999999999999978 0.99999999999999978 0.99999999999999978 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_R_p1" -p "grp_off_ctrl_PageGrp_R_p3";
+	rename -uid "297D9045-46AD-19A0-A411-7285A0567C12";
+createNode transform -n "ctrl_PageGrp_R_p3" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_Top|R1Follicle3350|grp_off_ctrl_PageGrp_R_p3|grp_cst_ctrl_PageGrp_R_p1";
+	rename -uid "9B94D61B-4750-D0B8-9412-CDB238E766BF";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 1 0.041082144 0.041082144 ;
+	setAttr ".t" -type "double3" 0 5.2338532103220563e-16 -1.6940658945086007e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape3" -p "ctrl_PageGrp_R_p3";
+	rename -uid "B7BC63CF-45D4-F575-9990-E8B8D3051F49";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		;
+createNode joint -n "joint52" -p "ctrl_PageGrp_R_p3";
 	rename -uid "5E7D9701-44D4-C5B8-E4A5-64B7584E3AD7";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 1.6690734905289162e-10 -1.3322676295501878e-15 -3.0331911027997593e-15 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 90.001053970488798 89.999734884815837 0 ;
+	setAttr ".jo" -type "double3" -1.9829255906378967e-14 -3.1805546814635152e-15 -7.0024105928415827e-15 ;
 	setAttr ".bps" -type "matrix" 0.9999999999778918 4.7778552758541117e-06 -4.6247625396418781e-06 0
 		 -4.7778552758302432e-06 0.99999999998858591 2.2096772249057343e-11 0 4.6247625396183086e-06 -3.2002779965481093e-16 0.99999999998930567 0
 		 0.056915476513656471 2.5587803166152745 -4.6934891102412557e-05 1;
@@ -2150,13 +3669,164 @@ createNode follicle -n "R1FollicleShape5050" -p "R1Follicle5050";
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint53" -p "R1Follicle5050";
+createNode transform -n "grp_off_ctrl_PageGrp_R_p4" -p "R1Follicle5050";
+	rename -uid "0CBD44BF-4A78-521C-B4EF-F7B43266C2A0";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".t" -type "double3" 0 -4.7162701329495245e-15 2.5035964967834445e-10 ;
+	setAttr ".r" -type "double3" 90.001053970488826 89.999734884815823 0 ;
+	setAttr ".s" -type "double3" 0.99999999999999978 0.99999999999999989 0.99999999999999989 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_R_p1" -p "grp_off_ctrl_PageGrp_R_p4";
+	rename -uid "C0200CA2-4819-637B-E19B-9DBE8854758E";
+createNode transform -n "ctrl_PageGrp_R_p4" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_Top|R1Follicle5050|grp_off_ctrl_PageGrp_R_p4|grp_cst_ctrl_PageGrp_R_p1";
+	rename -uid "DF68C8A5-455F-EA1D-4510-56BE83A5E6D4";
+	setAttr ".v" no;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape4" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_Top|R1Follicle5050|grp_off_ctrl_PageGrp_R_p4|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4";
+	rename -uid "B63E1F68-4979-5531-E0B2-888647B6AE6F";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		;
+createNode joint -n "joint53" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_Top|R1Follicle5050|grp_off_ctrl_PageGrp_R_p4|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4";
 	rename -uid "56285831-4837-0930-0D34-6DB8C8590D13";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
+	setAttr ".t" -type "double3" 2.5035967743392007e-10 -4.4408920985006262e-16 -4.7162930028391004e-15 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 90.001053970488798 89.999734884815837 0 ;
+	setAttr ".jo" -type "double3" -3.6734397117513501e-15 -3.1805546814635152e-15 -7.0032445961688991e-15 ;
 	setAttr ".bps" -type "matrix" 0.99999999997789168 4.7778552759096229e-06 -4.6247625397529012e-06 0
 		 -4.7778552758302415e-06 0.99999999998858591 2.2096661223880464e-11 0 4.6247625396738197e-06 -3.20027799650086e-16 0.99999999998930555 0
 		 0.056915353723264839 3.3729997779361112 -6.1912665355184915e-05 1;
@@ -2171,12 +3841,165 @@ createNode follicle -n "R1FollicleShape6650" -p "R1Follicle6650";
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint54" -p "R1Follicle6650";
+createNode transform -n "grp_off_ctrl_PageGrp_R_p5" -p "R1Follicle6650";
+	rename -uid "C5D19B4F-4415-FC61-BBD3-F8AEB98B6E3F";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".t" -type "double3" 0 -5.8998123294890133e-15 3.3381331032700245e-10 ;
+	setAttr ".r" -type "double3" 90.001053970488826 89.999734884815823 0 ;
+	setAttr ".s" -type "double3" 0.99999999999999978 1 1 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_R_p1" -p "grp_off_ctrl_PageGrp_R_p5";
+	rename -uid "D99E74EC-4EC6-72C9-B374-1D878650DADD";
+createNode transform -n "ctrl_PageGrp_R_p5" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_Top|R1Follicle6650|grp_off_ctrl_PageGrp_R_p5|grp_cst_ctrl_PageGrp_R_p1";
+	rename -uid "D95D0CE2-4A6C-C962-DBD2-EBB5DE5621A6";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 1 0.041082144 0.041082144 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape5" -p "ctrl_PageGrp_R_p5";
+	rename -uid "2E77AA3B-40A3-EE27-2C02-FABEB6FFEFFB";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		;
+createNode joint -n "joint54" -p "ctrl_PageGrp_R_p5";
 	rename -uid "8ADBF5C8-4E42-FFB5-B514-6CB4B58C9EFF";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 3.3381336583815369e-10 -1.7763568394002505e-15 -5.8997809892699649e-15 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 90.001053969222752 89.999734884815823 0 ;
+	setAttr ".jo" -type "double3" -1.2660843976235881e-09 -3.18074880711546e-15 -7.0032559529460832e-15 ;
 	setAttr ".bps" -type "matrix" 0.9999999999778918 4.777855275909622e-06 -4.6247625398084132e-06 0
 		 -4.7778552760434549e-06 0.99999999998858613 -1.0764149684416277e-16 0 4.6247625398925355e-06 2.2096615368190134e-11 0.99999999998930578 0
 		 0.0569152309328732 4.1872192392569465 -7.6890439608012784e-05 1;
@@ -2191,12 +4014,165 @@ createNode follicle -n "R1FollicleShape8350" -p "R1Follicle8350";
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint55" -p "R1Follicle8350";
+createNode transform -n "grp_off_ctrl_PageGrp_R_p6" -p "R1Follicle8350";
+	rename -uid "9F765148-41C7-EBD7-D945-96AE90F52AD2";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".t" -type "double3" 0 -7.6523743193349959e-15 4.1726697097566046e-10 ;
+	setAttr ".r" -type "double3" 90.001053970488826 89.999734884815823 0 ;
+	setAttr ".s" -type "double3" 0.99999999999999978 1 1 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_R_p1" -p "grp_off_ctrl_PageGrp_R_p6";
+	rename -uid "7F4063E9-4059-734D-0C73-48955D802961";
+createNode transform -n "ctrl_PageGrp_R_p6" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_Top|R1Follicle8350|grp_off_ctrl_PageGrp_R_p6|grp_cst_ctrl_PageGrp_R_p1";
+	rename -uid "64D5A2AB-4083-7D81-26B9-CABD2DDE88DD";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 1 0.041082144 0.041082144 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape6" -p "ctrl_PageGrp_R_p6";
+	rename -uid "AAE31A95-46DB-94F0-B1C2-FDB3793EAA8A";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		;
+createNode joint -n "joint55" -p "ctrl_PageGrp_R_p6";
 	rename -uid "67D91D2F-43CE-3A70-0F2B-E7B624F2F1F7";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 4.1726699873123607e-10 -1.7763568394002505e-15 -7.6523531435113146e-15 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 90.001053969222738 89.999734884815823 0 ;
+	setAttr ".jo" -type "double3" -1.2660873282414924e-09 -3.18074880711546e-15 -7.0032502538226341e-15 ;
 	setAttr ".bps" -type "matrix" 0.9999999999778918 4.777855275909622e-06 -4.6247625398084132e-06 0
 		 -4.7778552760434549e-06 0.99999999998858613 -1.0764149684416277e-16 0 4.6247625398925355e-06 2.2096615368190134e-11 0.99999999998930578 0
 		 0.05691510814248156 5.0014387005777836 -9.1868213860812897e-05 1;
@@ -2211,23 +4187,176 @@ createNode follicle -n "R1FollicleShape9950" -p "R1Follicle9950";
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint56" -p "R1Follicle9950";
+createNode transform -n "grp_off_ctrl_PageGrp_R_p7" -p "R1Follicle9950";
+	rename -uid "00BB65D6-405B-59F6-3303-7BBFB7B8603C";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".t" -type "double3" 0 -9.4047618203938442e-15 5.0072063162431846e-10 ;
+	setAttr ".r" -type "double3" 90.001053970488826 89.999734884815823 0 ;
+	setAttr ".s" -type "double3" 0.99999999999999978 1 1 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_R_p1" -p "grp_off_ctrl_PageGrp_R_p7";
+	rename -uid "CC54A73A-4F66-4C78-8D05-BABF63A5201C";
+createNode transform -n "ctrl_PageGrp_R_p7" -p "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_Top|R1Follicle9950|grp_off_ctrl_PageGrp_R_p7|grp_cst_ctrl_PageGrp_R_p1";
+	rename -uid "1FBF0B85-472A-AE29-F9D9-4CA882B1CC5C";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 1 0.041082144 0.041082144 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape7" -p "ctrl_PageGrp_R_p7";
+	rename -uid "8E630284-4F73-4F56-62A4-51B97004A8B7";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		;
+createNode joint -n "joint56" -p "ctrl_PageGrp_R_p7";
 	rename -uid "662D3866-4230-37AA-F091-9182E01A1713";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 5.0072065937989407e-10 -1.7763568394002505e-15 -9.4047220098453232e-15 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 90.001053969222738 89.999734884815823 0 ;
+	setAttr ".jo" -type "double3" -1.2660902573063916e-09 -3.1805546814635152e-15 -7.0023564037748615e-15 ;
 	setAttr ".bps" -type "matrix" 0.9999999999778918 4.7778552758541109e-06 -4.6247625398084124e-06 0
 		 -4.7778552760434549e-06 0.99999999998858613 -5.2126957481115929e-17 0 4.6247625398925355e-06 2.2096615368190128e-11 0.99999999998930589 0
 		 0.056914985352089935 5.8156581618986198 -0.00010684598811361301 1;
 	setAttr ".radi" 0.2;
-createNode transform -n "grp_OFF_ctrl_PageGroup_L" -p "PageGrp_L1";
+createNode transform -n "grp_OFF_ctrl_PageGroup_R" -p "PageGrp_R";
 	rename -uid "65E0EF04-4DD1-3A10-4FD1-D8A020C4A936";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 15;
 	setAttr ".t" -type "double3" -3.2066339585613637 1.0782113544610969 6.2956769203865131 ;
 	setAttr ".r" -type "double3" 90.000000000000028 0 0 ;
-createNode transform -n "curve3" -p "|PageGrp_L1|grp_OFF_ctrl_PageGroup_L";
+createNode transform -n "ctrl_PageGroup_turn_R" -p "grp_OFF_ctrl_PageGroup_R";
 	rename -uid "C16D4B97-41B8-88E4-FC96-7DA26DD4A4A1";
 	setAttr ".ove" yes;
 	setAttr ".ovrgbf" yes;
@@ -2239,7 +4368,7 @@ createNode transform -n "curve3" -p "|PageGrp_L1|grp_OFF_ctrl_PageGroup_L";
 	setAttr ".mxrl" -type "double3" 45 90 45 ;
 	setAttr ".mrye" yes;
 	setAttr ".xrye" yes;
-createNode nurbsCurve -n "curveShape3" -p "|PageGrp_L1|grp_OFF_ctrl_PageGroup_L|curve3";
+createNode nurbsCurve -n "ctrl_PageGroup_turn_RShape" -p "ctrl_PageGroup_turn_R";
 	rename -uid "74F8E015-4A7B-1E85-6802-90A26BE3E756";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -2292,7 +4421,7 @@ createNode nurbsCurve -n "curveShape3" -p "|PageGrp_L1|grp_OFF_ctrl_PageGroup_L|
 		0.13531719021420738 1.0916057671225802e-16 0.8251372027113989
 		2.7364027317919729e-06 1.0916057671225802e-16 0.69577400783593213
 		;
-createNode transform -n "grp_latice" -p "PageGrp_L1";
+createNode transform -n "grp_latice" -p "PageGrp_R";
 	rename -uid "182658CF-4EEB-238E-0616-8F9B4333CB63";
 	setAttr ".v" no;
 	setAttr ".r" -type "double3" 0 180 0 ;
@@ -3171,19 +5300,19 @@ createNode transform -n "grp_OFF_ctrl_PageGroup_L" -p "PageGrp_L";
 	setAttr ".ovc" 15;
 	setAttr ".t" -type "double3" -3.2066339585613637 1.0782113544610969 6.2956769203865131 ;
 	setAttr ".r" -type "double3" 90.000000000000028 0 0 ;
-createNode transform -n "curve3" -p "|PageGrp_L|grp_OFF_ctrl_PageGroup_L";
+createNode transform -n "ctrl_PageGroup_turn_L" -p "grp_OFF_ctrl_PageGroup_L";
 	rename -uid "CB68F046-42A7-DE09-0142-A59576921EDE";
 	setAttr ".ove" yes;
 	setAttr ".ovrgbf" yes;
-	setAttr ".ovrgb" -type "float3" 1 0.041082144 0.041082144 ;
-	setAttr ".r" -type "double3" 0 90 0 ;
+	setAttr ".ovrgb" -type "float3" 0.23988932 1 0.061915278 ;
+	setAttr ".r" -type "double3" 0 89.378521317512792 0 ;
 	setAttr -l on ".rx";
 	setAttr -l on ".rz";
 	setAttr ".mnrl" -type "double3" -45 0 -45 ;
 	setAttr ".mxrl" -type "double3" 45 90 45 ;
 	setAttr ".mrye" yes;
 	setAttr ".xrye" yes;
-createNode nurbsCurve -n "curveShape3" -p "|PageGrp_L|grp_OFF_ctrl_PageGroup_L|curve3";
+createNode nurbsCurve -n "ctrl_PageGroup_turn_LShape" -p "ctrl_PageGroup_turn_L";
 	rename -uid "1C146988-4270-ABBC-B27F-F89C1ED47D4B";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -3249,12 +5378,165 @@ createNode follicle -n "nurbsPlane2FollicleShape50" -p "nurbsPlane2Follicle50";
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint27" -p "nurbsPlane2Follicle50";
+createNode transform -n "grp_off_ctrl_PageGrp_L_p1" -p "nurbsPlane2Follicle50";
+	rename -uid "F8812985-413F-5653-5A86-71AE77362220";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".t" -type "double3" 0 -2.7838531497980102e-05 0 ;
+	setAttr ".r" -type "double3" -89.959582524590317 88.514956025935561 0.040702391284228943 ;
+	setAttr ".s" -type "double3" 1 1.0000000000000002 0.99999999999999989 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_L_p1" -p "grp_off_ctrl_PageGrp_L_p1";
+	rename -uid "5AF53B43-4573-CECB-32D3-2D896536D474";
+createNode transform -n "ctrl_PageGrp_L_p1" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle50|grp_off_ctrl_PageGrp_L_p1|grp_cst_ctrl_PageGrp_L_p1";
+	rename -uid "1E4C5C93-4BF9-62C7-5ACE-DEAC2CCF7F8E";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 0.23988932 1 0.061915278 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_L_pShape1" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle50|grp_off_ctrl_PageGrp_L_p1|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1";
+	rename -uid "BECC232A-49D4-52A0-D946-98BFDF0D95B3";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		;
+createNode joint -n "joint27" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle50|grp_off_ctrl_PageGrp_L_p1|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1";
 	rename -uid "3BC335A6-4494-C616-D951-E39AA9A1166F";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 5.1252091459730309e-10 -1.3179091151727107e-10 2.7838531492950281e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -90 -89.999999999999972 0 ;
+	setAttr ".jo" -type "double3" -0.00029849113258054643 -0.0010474594068748085 -178.51495639525982 ;
 	setAttr ".bps" -type "matrix" 1 8.8817841970012523e-16 0 0 -8.8817841970012523e-16 1 0 0
 		 0 0 1 0 -0.056915648673301761 0.93034054840295077 -2.7755575615628914e-17 1;
 	setAttr ".radi" 0.2;
@@ -3268,12 +5550,164 @@ createNode follicle -n "nurbsPlane2FollicleShape1750" -p "nurbsPlane2Follicle175
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint28" -p "nurbsPlane2Follicle1750";
+createNode transform -n "grp_off_ctrl_PageGrp_L_p2" -p "nurbsPlane2Follicle1750";
+	rename -uid "8C9ACE77-444B-FA35-D822-899AEA59DC7E";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".r" -type "double3" -89.9595825245908 88.514956025935561 0.040702391283860592 ;
+	setAttr ".s" -type "double3" 1 1.0000000000000002 0.99999999999999989 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_L_p1" -p "grp_off_ctrl_PageGrp_L_p2";
+	rename -uid "2AB4D8CB-427F-7CA5-2DA5-7B8E7D984F29";
+createNode transform -n "ctrl_PageGrp_L_p1" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle1750|grp_off_ctrl_PageGrp_L_p2|grp_cst_ctrl_PageGrp_L_p1";
+	rename -uid "0E115E94-4D78-33B0-CFAA-CC994E92B481";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 0.23988932 1 0.061915278 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_L_pShape1" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle1750|grp_off_ctrl_PageGrp_L_p2|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1";
+	rename -uid "D811EE55-4D25-C5D7-1DC1-3C875A572F26";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		;
+createNode joint -n "joint28" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle1750|grp_off_ctrl_PageGrp_L_p2|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1";
 	rename -uid "8FB6B42F-4250-F696-1965-A08A27C3E7DD";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 0 2.2204460492503131e-16 -5.5057141571529522e-21 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -90 -89.999999999999972 0 ;
+	setAttr ".jo" -type "double3" -0.00029849113269204291 -0.0010474594068686617 -178.51495639525984 ;
 	setAttr ".bps" -type "matrix" 1 8.8817841970012523e-16 0 0 -8.8817841970012523e-16 1 0 0
 		 0 0 1 0 -0.056915648673302122 1.7445600098615563 -2.7755575615628914e-17 1;
 	setAttr ".radi" 0.2;
@@ -3287,12 +5721,164 @@ createNode follicle -n "nurbsPlane2FollicleShape3350" -p "nurbsPlane2Follicle335
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint29" -p "nurbsPlane2Follicle3350";
+createNode transform -n "grp_off_ctrl_PageGrp_L_p3" -p "nurbsPlane2Follicle3350";
+	rename -uid "FCAB991A-47AC-AC40-8548-FBB78ABFD89D";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".r" -type "double3" -89.959582524598176 88.514956025935561 0.040702391276374317 ;
+	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000004 1 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_L_p1" -p "grp_off_ctrl_PageGrp_L_p3";
+	rename -uid "FAA3FE50-4F2C-57A8-7D51-4FA3F1ACCF56";
+createNode transform -n "ctrl_PageGrp_L_p1" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle3350|grp_off_ctrl_PageGrp_L_p3|grp_cst_ctrl_PageGrp_L_p1";
+	rename -uid "53EE1C96-4720-3507-4E1C-3CB7320A29C2";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 0.23988932 1 0.061915278 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_L_pShape1" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle3350|grp_off_ctrl_PageGrp_L_p3|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1";
+	rename -uid "E540007D-4FB3-2EF8-D4D6-64AC62087A6B";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		;
+createNode joint -n "joint29" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle3350|grp_off_ctrl_PageGrp_L_p3|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1";
 	rename -uid "16E14F8C-44EE-8A18-A969-A5A0142EC64E";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" -2.7755575615628914e-17 -4.4408920985006262e-16 -3.3881317890172014e-21 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -90 -89.999999999999972 0 ;
+	setAttr ".jo" -type "double3" -0.00029849113256331461 -0.0010474594066780102 -178.51495639525984 ;
 	setAttr ".bps" -type "matrix" 1 8.8817841970012523e-16 0 0 -8.8817841970012523e-16 1 0 0
 		 0 0 1 0 -0.056915648673302482 2.5587794713201619 -2.7755575615628914e-17 1;
 	setAttr ".radi" 0.2;
@@ -3306,12 +5892,164 @@ createNode follicle -n "nurbsPlane2FollicleShape5050" -p "nurbsPlane2Follicle505
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint30" -p "nurbsPlane2Follicle5050";
+createNode transform -n "grp_off_ctrl_PageGrp_L_p4" -p "nurbsPlane2Follicle5050";
+	rename -uid "EE1E6A48-4C39-A3E4-6372-3B9861ECA78C";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".r" -type "double3" -89.959582524591539 88.514956025935803 0.040702391282639964 ;
+	setAttr ".s" -type "double3" 0.99999999999999989 1 0.99999999999999967 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_L_p1" -p "grp_off_ctrl_PageGrp_L_p4";
+	rename -uid "3BB89F7F-4F91-F42B-05F9-60A302E54905";
+createNode transform -n "ctrl_PageGrp_L_p1" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle5050|grp_off_ctrl_PageGrp_L_p4|grp_cst_ctrl_PageGrp_L_p1";
+	rename -uid "76EA494A-4F14-FDA7-E2C1-ADA332E78C98";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 0.23988932 1 0.061915278 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_L_pShape1" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle5050|grp_off_ctrl_PageGrp_L_p4|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1";
+	rename -uid "82BCAE4F-4E3D-BAB1-42B8-4781293D6B9C";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		;
+createNode joint -n "joint30" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle5050|grp_off_ctrl_PageGrp_L_p4|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1";
 	rename -uid "63A4AB43-4AF4-6F05-72FD-F5B9011A8F7A";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 2.7755575615628914e-17 4.4408920985006262e-16 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -90 -89.999999999999972 0 ;
+	setAttr ".jo" -type "double3" -0.0002984911321917865 -0.0010474594068401886 -178.5149563952601 ;
 	setAttr ".bps" -type "matrix" 1 8.8817841970012523e-16 0 0 -8.8817841970012523e-16 1 0 0
 		 0 0 1 0 -0.056915648673302843 3.3729989327787679 -2.7755575615628914e-17 1;
 	setAttr ".radi" 0.2;
@@ -3325,12 +6063,164 @@ createNode follicle -n "nurbsPlane2FollicleShape6650" -p "nurbsPlane2Follicle665
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint31" -p "nurbsPlane2Follicle6650";
+createNode transform -n "grp_off_ctrl_PageGrp_L_p5" -p "nurbsPlane2Follicle6650";
+	rename -uid "68FB5E00-4341-C0C7-70E7-A5876E40BE72";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".r" -type "double3" -89.959582524591539 88.514956025935732 0.040702391282637869 ;
+	setAttr ".s" -type "double3" 0.99999999999999956 0.99999999999999978 0.99999999999999944 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_L_p1" -p "grp_off_ctrl_PageGrp_L_p5";
+	rename -uid "1C3396D8-4765-E7D1-AB0D-F78E0678830B";
+createNode transform -n "ctrl_PageGrp_L_p1" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle6650|grp_off_ctrl_PageGrp_L_p5|grp_cst_ctrl_PageGrp_L_p1";
+	rename -uid "A3796FB3-4260-D1CA-94CE-79A15D67676A";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 0.23988932 1 0.061915278 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_L_pShape1" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle6650|grp_off_ctrl_PageGrp_L_p5|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1";
+	rename -uid "23B2AD64-4EBA-6E74-03BF-CC8E68457048";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		;
+createNode joint -n "joint31" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle6650|grp_off_ctrl_PageGrp_L_p5|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1";
 	rename -uid "CE5EE943-4509-7A84-9C0F-75A2FBC84DDD";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 0 -8.8817841970012523e-16 3.3881317890172014e-21 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -90 -89.999999999999972 0 ;
+	setAttr ".jo" -type "double3" -0.00029849113220758745 -0.0010474594068398584 -178.51495639525999 ;
 	setAttr ".bps" -type "matrix" 1 8.8817841970012523e-16 0 0 -8.8817841970012523e-16 1 0 0
 		 0 0 1 0 -0.056915648673303204 4.1872183942373731 -2.7755575615628914e-17 1;
 	setAttr ".radi" 0.2;
@@ -3344,12 +6234,164 @@ createNode follicle -n "nurbsPlane2FollicleShape8350" -p "nurbsPlane2Follicle835
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint32" -p "nurbsPlane2Follicle8350";
+createNode transform -n "grp_off_ctrl_PageGrp_L_p6" -p "nurbsPlane2Follicle8350";
+	rename -uid "FA366011-4D96-0301-C257-5C8E0356A292";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".r" -type "double3" -89.95958252459252 88.514956025935732 0.040702391281778785 ;
+	setAttr ".s" -type "double3" 0.99999999999999956 0.99999999999999978 0.99999999999999933 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_L_p1" -p "grp_off_ctrl_PageGrp_L_p6";
+	rename -uid "906A077F-47F8-C6CA-EFE0-7795F38E28C2";
+createNode transform -n "ctrl_PageGrp_L_p1" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle8350|grp_off_ctrl_PageGrp_L_p6|grp_cst_ctrl_PageGrp_L_p1";
+	rename -uid "7A6E1CD9-4694-A86C-18D4-A48BCD6E6D34";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 0.23988932 1 0.061915278 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_L_pShape1" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle8350|grp_off_ctrl_PageGrp_L_p6|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1";
+	rename -uid "14C07B16-4193-D381-7347-6EA8AE3976BF";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		;
+createNode joint -n "joint32" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle8350|grp_off_ctrl_PageGrp_L_p6|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1";
 	rename -uid "F91F494E-4EE3-DC8F-F4BA-BAAA695FB429";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" -2.7755575615628914e-17 0 3.3881317890172014e-21 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -90 -89.999999999999972 0 ;
+	setAttr ".jo" -type "double3" -0.00029849113233110887 -0.0010474594068143048 -178.51495639525999 ;
 	setAttr ".bps" -type "matrix" 1 8.8817841970012523e-16 0 0 -8.8817841970012523e-16 1 0 0
 		 0 0 1 0 -0.056915648673303565 5.0014378556959791 -2.7755575615628914e-17 1;
 	setAttr ".radi" 0.2;
@@ -3363,12 +6405,164 @@ createNode follicle -n "nurbsPlane2FollicleShape9950" -p "nurbsPlane2Follicle995
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint33" -p "nurbsPlane2Follicle9950";
+createNode transform -n "grp_off_ctrl_PageGrp_L_p7" -p "nurbsPlane2Follicle9950";
+	rename -uid "B12C2DB0-4DE5-A62D-F78A-77BA3CF536E9";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".r" -type "double3" -89.95958252459252 88.514956025935618 0.040702391282512011 ;
+	setAttr ".s" -type "double3" 1 1.0000000000000002 0.99999999999999956 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_L_p1" -p "grp_off_ctrl_PageGrp_L_p7";
+	rename -uid "98B14052-4D06-49DA-14C3-E1BD6C6FC9C7";
+createNode transform -n "ctrl_PageGrp_L_p1" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle9950|grp_off_ctrl_PageGrp_L_p7|grp_cst_ctrl_PageGrp_L_p1";
+	rename -uid "D8973116-4F51-1E09-8EF8-A9A61F7E2BE6";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 0.23988932 1 0.061915278 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_L_pShape1" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle9950|grp_off_ctrl_PageGrp_L_p7|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1";
+	rename -uid "D141F4DC-4AB4-1057-DC68-B4A71608DBE8";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.43300521200926284 -0.0048616976009461643 -0.00037811054386780189
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 0.13137128896977018
+		-0.1695064129820007 0.12688770191269078 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.1321275100575052
+		-0.16950641298200048 -0.13661109711458408 -0.00037811054386780189
+		-0.16950641298200081 -0.0048616976009462753 -0.00037811054386780189
+		;
+createNode joint -n "joint33" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle9950|grp_off_ctrl_PageGrp_L_p7|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1";
 	rename -uid "B4F07902-4813-AAD6-AB6C-70A89A1E50AC";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" -2.7755575615628914e-17 0 6.7762635780344027e-21 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -90 -89.999999999999972 0 ;
+	setAttr ".jo" -type "double3" -0.00029849113305689163 -0.0010474594068209469 -178.5149563952599 ;
 	setAttr ".bps" -type "matrix" 1 8.8817841970012523e-16 0 0 -8.8817841970012523e-16 1 0 0
 		 0 0 1 0 -0.056915648673303926 5.8156573171545851 -2.7755575615628914e-17 1;
 	setAttr ".radi" 0.2;
@@ -3383,12 +6577,163 @@ createNode follicle -n "nurbsPlane1FollicleShape50" -p "nurbsPlane1Follicle50";
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint20" -p "nurbsPlane1Follicle50";
+createNode transform -n "grp_off_ctrl_PageGrp_L_p8" -p "nurbsPlane1Follicle50";
+	rename -uid "9FE48C7E-4938-D9FA-3971-07A6BF93B46E";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".r" -type "double3" 179.99992318252717 -89.999999997716856 0 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_L_p1" -p "grp_off_ctrl_PageGrp_L_p8";
+	rename -uid "FA50ACF8-4116-9962-28C8-08BFA2365D5A";
+createNode transform -n "ctrl_PageGrp_R_p4" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle50|grp_off_ctrl_PageGrp_L_p8|grp_cst_ctrl_PageGrp_L_p1";
+	rename -uid "280C13B8-4A90-CD45-7931-CCBD2F1F76D8";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 0.23988932 1 0.061915278 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape4" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle50|grp_off_ctrl_PageGrp_L_p8|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4";
+	rename -uid "568998C8-4EB1-F612-61EF-DBA34D6DA107";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		;
+createNode joint -n "joint20" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle50|grp_off_ctrl_PageGrp_L_p8|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4";
 	rename -uid "99EAAADE-4D13-4795-7BD9-2C841FC83216";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 1.3877787807814457e-17 6.3527471044072525e-22 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 90 89.999999999999972 0 ;
+	setAttr ".jo" -type "double3" 89.999923182527169 -2.2831748740455961e-09 -180 ;
 	setAttr ".bps" -type "matrix" 1 8.8817841970012523e-16 0 0 -8.8817841970012523e-16 1 0 0
 		 -0 0 1 0 -0.23870159193486165 0.93034054840295077 2.7755575615628914e-17 1;
 	setAttr ".radi" 0.2;
@@ -3402,12 +6747,164 @@ createNode follicle -n "nurbsPlane1FollicleShape1750" -p "nurbsPlane1Follicle175
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint21" -p "nurbsPlane1Follicle1750";
+createNode transform -n "grp_off_ctrl_PageGrp_L_p9" -p "nurbsPlane1Follicle1750";
+	rename -uid "5AFF4A7D-4DCF-AC0D-546F-A79C55C771E0";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".r" -type "double3" 179.99992318252717 -89.999999997716984 0 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999989 0.99999999999999978 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_L_p1" -p "grp_off_ctrl_PageGrp_L_p9";
+	rename -uid "07E25BD1-43BE-1B81-A530-DFAEFBC69B80";
+createNode transform -n "ctrl_PageGrp_R_p4" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle1750|grp_off_ctrl_PageGrp_L_p9|grp_cst_ctrl_PageGrp_L_p1";
+	rename -uid "73347AAD-446F-5041-7437-14A1867B065A";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 0.23988932 1 0.061915278 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape4" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle1750|grp_off_ctrl_PageGrp_L_p9|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4";
+	rename -uid "6230CBC2-40C6-6DD2-2656-50A976BCBED9";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		;
+createNode joint -n "joint21" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle1750|grp_off_ctrl_PageGrp_L_p9|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4";
 	rename -uid "D5782B46-4036-C4F0-669E-B9A021E5B4E5";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 0 -4.2351647362715017e-22 -2.2204460492503131e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 90 89.999999999999972 0 ;
+	setAttr ".jo" -type "double3" 89.999923182527169 -2.2830476519917996e-09 -180 ;
 	setAttr ".bps" -type "matrix" 1 8.8817841970012523e-16 0 0 -8.8817841970012523e-16 1 0 0
 		 -0 0 1 0 -0.23870159193486201 1.7445600098615563 2.7755575615628914e-17 1;
 	setAttr ".radi" 0.2;
@@ -3421,12 +6918,164 @@ createNode follicle -n "nurbsPlane1FollicleShape3350" -p "nurbsPlane1Follicle335
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint22" -p "nurbsPlane1Follicle3350";
+createNode transform -n "grp_off_ctrl_PageGrp_L_p10" -p "nurbsPlane1Follicle3350";
+	rename -uid "01CC0673-4FCE-2745-6807-9AB9B589E1B1";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".r" -type "double3" 179.99992318252717 -89.999999997716856 0 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999989 0.99999999999999978 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_L_p1" -p "grp_off_ctrl_PageGrp_L_p10";
+	rename -uid "278D4C79-49B8-398B-3C41-0F80216CCC8B";
+createNode transform -n "ctrl_PageGrp_R_p4" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle3350|grp_off_ctrl_PageGrp_L_p10|grp_cst_ctrl_PageGrp_L_p1";
+	rename -uid "C709335A-47D0-0D2A-D666-17A3FC8965A4";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 0.23988932 1 0.061915278 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape4" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle3350|grp_off_ctrl_PageGrp_L_p10|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4";
+	rename -uid "922827BA-4C6F-6296-4D7B-8B8504C67DEB";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		;
+createNode joint -n "joint22" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle3350|grp_off_ctrl_PageGrp_L_p10|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4";
 	rename -uid "86335695-42C9-6751-2A65-878E92AB7F23";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 0 4.2351647362715017e-22 -4.4408920985006262e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 90 89.999999999999972 0 ;
+	setAttr ".jo" -type "double3" 89.999923182527169 -2.2831748743944153e-09 -180 ;
 	setAttr ".bps" -type "matrix" 1 8.8817841970012523e-16 0 0 -8.8817841970012523e-16 1 0 0
 		 -0 0 1 0 -0.23870159193486237 2.5587794713201619 2.7755575615628914e-17 1;
 	setAttr ".radi" 0.2;
@@ -3440,12 +7089,164 @@ createNode follicle -n "nurbsPlane1FollicleShape5050" -p "nurbsPlane1Follicle505
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint23" -p "nurbsPlane1Follicle5050";
+createNode transform -n "grp_off_ctrl_PageGrp_L_p11" -p "nurbsPlane1Follicle5050";
+	rename -uid "426A994F-4FAC-FE0A-1CF4-76829CD40922";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".r" -type "double3" 179.99992318252717 -89.999999997716984 0 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999978 0.99999999999999967 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_L_p1" -p "grp_off_ctrl_PageGrp_L_p11";
+	rename -uid "8C3B0890-42CA-153A-9A23-A1B510CADEFE";
+createNode transform -n "ctrl_PageGrp_R_p4" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle5050|grp_off_ctrl_PageGrp_L_p11|grp_cst_ctrl_PageGrp_L_p1";
+	rename -uid "C3F09498-40D4-8F8A-B0B0-B581C6B81D6D";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 0.23988932 1 0.061915278 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape4" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle5050|grp_off_ctrl_PageGrp_L_p11|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4";
+	rename -uid "709151E2-4302-4CCB-A7BF-438F083F90E4";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		;
+createNode joint -n "joint23" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle5050|grp_off_ctrl_PageGrp_L_p11|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4";
 	rename -uid "45A96FAC-4EFC-A9B3-CE8F-069FA3FB81AB";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 0 0 -4.4408920985006262e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 90 89.999999999999972 0 ;
+	setAttr ".jo" -type "double3" 89.999923182527155 -2.2830476516854446e-09 -180 ;
 	setAttr ".bps" -type "matrix" 1 8.8817841970012523e-16 0 0 -8.8817841970012523e-16 1 0 0
 		 -0 0 1 0 -0.23870159193486273 3.3729989327787679 2.7755575615628914e-17 1;
 	setAttr ".radi" 0.2;
@@ -3459,12 +7260,164 @@ createNode follicle -n "nurbsPlane1FollicleShape6650" -p "nurbsPlane1Follicle665
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint24" -p "nurbsPlane1Follicle6650";
+createNode transform -n "grp_off_ctrl_PageGrp_L_p12" -p "nurbsPlane1Follicle6650";
+	rename -uid "531F7210-410A-78EF-15D6-069976098895";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".r" -type "double3" 179.99992318252717 -89.999999997717083 0 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999967 0.99999999999999956 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_L_p1" -p "grp_off_ctrl_PageGrp_L_p12";
+	rename -uid "9EB44D87-4084-BC9D-8C57-529493085638";
+createNode transform -n "ctrl_PageGrp_R_p4" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle6650|grp_off_ctrl_PageGrp_L_p12|grp_cst_ctrl_PageGrp_L_p1";
+	rename -uid "AC7595F7-4490-D5D2-5EF4-C0B0A7A39346";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 0.23988932 1 0.061915278 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape4" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle6650|grp_off_ctrl_PageGrp_L_p12|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4";
+	rename -uid "0472A586-475D-C40F-0678-BEB0DDE0CB30";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		;
+createNode joint -n "joint24" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle6650|grp_off_ctrl_PageGrp_L_p12|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4";
 	rename -uid "D4CEB162-45D0-EEB6-2DB0-D8962796645B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 0 8.4703294725430034e-22 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 90 89.999999999999972 0 ;
+	setAttr ".jo" -type "double3" 89.999923182527169 -2.2829458742389597e-09 -180 ;
 	setAttr ".bps" -type "matrix" 1 8.8817841970012523e-16 0 0 -8.8817841970012523e-16 1 0 0
 		 -0 0 1 0 -0.23870159193486309 4.1872183942373731 2.7755575615628914e-17 1;
 	setAttr ".radi" 0.2;
@@ -3478,12 +7431,164 @@ createNode follicle -n "nurbsPlane1FollicleShape8350" -p "nurbsPlane1Follicle835
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint25" -p "nurbsPlane1Follicle8350";
+createNode transform -n "grp_off_ctrl_PageGrp_L_p13" -p "nurbsPlane1Follicle8350";
+	rename -uid "852FB57E-4150-B20E-BDD8-4F995694F6F2";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".r" -type "double3" 179.99992318252717 -89.999999997716856 0 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999956 0.99999999999999944 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_L_p1" -p "grp_off_ctrl_PageGrp_L_p13";
+	rename -uid "BED3296D-489F-66EF-CFBC-70A9349EDBDB";
+createNode transform -n "ctrl_PageGrp_R_p4" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle8350|grp_off_ctrl_PageGrp_L_p13|grp_cst_ctrl_PageGrp_L_p1";
+	rename -uid "EA934447-4A14-50B8-D615-C0903090E5AA";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 0.23988932 1 0.061915278 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape4" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle8350|grp_off_ctrl_PageGrp_L_p13|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4";
+	rename -uid "B477CAFE-4369-46ED-F232-F4B77CB632D4";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		;
+createNode joint -n "joint25" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle8350|grp_off_ctrl_PageGrp_L_p13|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4";
 	rename -uid "0A1599F0-4F8C-9441-888E-128545B1B064";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 0 0 -1.7763568394002505e-15 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 90 89.999999999999972 0 ;
+	setAttr ".jo" -type "double3" 89.999923182527169 -2.2831748740486302e-09 -180 ;
 	setAttr ".bps" -type "matrix" 1 8.8817841970012523e-16 0 0 -8.8817841970012523e-16 1 0 0
 		 -0 0 1 0 -0.23870159193486346 5.0014378556959791 2.7755575615628914e-17 1;
 	setAttr ".radi" 0.2;
@@ -3497,25 +7602,177 @@ createNode follicle -n "nurbsPlane1FollicleShape9950" -p "nurbsPlane1Follicle995
 	setAttr -s 2 ".sts[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".cws[0:1]"  0 1 3 1 0.2 3;
 	setAttr -s 2 ".ats[0:1]"  0 1 3 1 0.2 3;
-createNode joint -n "joint26" -p "nurbsPlane1Follicle9950";
+createNode transform -n "grp_off_ctrl_PageGrp_L_p14" -p "nurbsPlane1Follicle9950";
+	rename -uid "54AC5332-4CE3-53EB-33C7-F294BC3EE482";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 15;
+	setAttr ".r" -type "double3" 179.99992318252717 -89.999999997717083 0 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999944 0.99999999999999922 ;
+createNode transform -n "grp_cst_ctrl_PageGrp_L_p1" -p "grp_off_ctrl_PageGrp_L_p14";
+	rename -uid "4BAB5377-4912-F4D0-8D09-46AAF77FCDC6";
+createNode transform -n "ctrl_PageGrp_R_p4" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle9950|grp_off_ctrl_PageGrp_L_p14|grp_cst_ctrl_PageGrp_L_p1";
+	rename -uid "71191965-4DDC-B773-F6DE-3CB3B624416D";
+	setAttr ".ove" yes;
+	setAttr ".ovrgbf" yes;
+	setAttr ".ovrgb" -type "float3" 0.23988932 1 0.061915278 ;
+	setAttr ".t" -type "double3" 0 0 -3.3881317890172014e-21 ;
+createNode nurbsCurve -n "ctrl_PageGrp_R_pShape4" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle9950|grp_off_ctrl_PageGrp_L_p14|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4";
+	rename -uid "55E790AC-42B8-7784-6215-31A9BF60B965";
+	setAttr -k off ".v";
+	setAttr -av ".cp[0].xv";
+	setAttr -av ".cp[0].yv";
+	setAttr -av ".cp[0].zv";
+	setAttr -av ".cp[1].xv";
+	setAttr -av ".cp[1].yv";
+	setAttr -av ".cp[1].zv";
+	setAttr -av ".cp[2].xv";
+	setAttr -av ".cp[2].yv";
+	setAttr -av ".cp[2].zv";
+	setAttr -av ".cp[3].xv";
+	setAttr -av ".cp[3].yv";
+	setAttr -av ".cp[3].zv";
+	setAttr -av ".cp[4].xv";
+	setAttr -av ".cp[4].yv";
+	setAttr -av ".cp[4].zv";
+	setAttr -av ".cp[5].xv";
+	setAttr -av ".cp[5].yv";
+	setAttr -av ".cp[5].zv";
+	setAttr -av ".cp[6].xv";
+	setAttr -av ".cp[6].yv";
+	setAttr -av ".cp[6].zv";
+	setAttr -av ".cp[7].xv";
+	setAttr -av ".cp[7].yv";
+	setAttr -av ".cp[7].zv";
+	setAttr -av ".cp[8].xv";
+	setAttr -av ".cp[8].yv";
+	setAttr -av ".cp[8].zv";
+	setAttr -av ".cp[9].xv";
+	setAttr -av ".cp[9].yv";
+	setAttr -av ".cp[9].zv";
+	setAttr -av ".cp[10].xv";
+	setAttr -av ".cp[10].yv";
+	setAttr -av ".cp[10].zv";
+	setAttr -av ".cp[11].xv";
+	setAttr -av ".cp[11].yv";
+	setAttr -av ".cp[11].zv";
+	setAttr -av ".cp[12].xv";
+	setAttr -av ".cp[12].yv";
+	setAttr -av ".cp[12].zv";
+	setAttr -av ".cp[13].xv";
+	setAttr -av ".cp[13].yv";
+	setAttr -av ".cp[13].zv";
+	setAttr -av ".cp[14].xv";
+	setAttr -av ".cp[14].yv";
+	setAttr -av ".cp[14].zv";
+	setAttr -av ".cp[15].xv";
+	setAttr -av ".cp[15].yv";
+	setAttr -av ".cp[15].zv";
+	setAttr -av ".cp[16].xv";
+	setAttr -av ".cp[16].yv";
+	setAttr -av ".cp[16].zv";
+	setAttr -av ".cp[17].xv";
+	setAttr -av ".cp[17].yv";
+	setAttr -av ".cp[17].zv";
+	setAttr -av ".cp[18].xv";
+	setAttr -av ".cp[18].yv";
+	setAttr -av ".cp[18].zv";
+	setAttr -av ".cp[19].xv";
+	setAttr -av ".cp[19].yv";
+	setAttr -av ".cp[19].zv";
+	setAttr -av ".cp[20].xv";
+	setAttr -av ".cp[20].yv";
+	setAttr -av ".cp[20].zv";
+	setAttr -av ".cp[21].xv";
+	setAttr -av ".cp[21].yv";
+	setAttr -av ".cp[21].zv";
+	setAttr -av ".cp[22].xv";
+	setAttr -av ".cp[22].yv";
+	setAttr -av ".cp[22].zv";
+	setAttr -av ".cp[23].xv";
+	setAttr -av ".cp[23].yv";
+	setAttr -av ".cp[23].zv";
+	setAttr -av ".cp[24].xv";
+	setAttr -av ".cp[24].yv";
+	setAttr -av ".cp[24].zv";
+	setAttr -av ".cp[25].xv";
+	setAttr -av ".cp[25].yv";
+	setAttr -av ".cp[25].zv";
+	setAttr -av ".cp[26].xv";
+	setAttr -av ".cp[26].yv";
+	setAttr -av ".cp[26].zv";
+	setAttr -av ".cp[27].xv";
+	setAttr -av ".cp[27].yv";
+	setAttr -av ".cp[27].zv";
+	setAttr -av ".cp[28].xv";
+	setAttr -av ".cp[28].yv";
+	setAttr -av ".cp[28].zv";
+	setAttr -av ".cp[29].xv";
+	setAttr -av ".cp[29].yv";
+	setAttr -av ".cp[29].zv";
+	setAttr -av ".cp[30].xv";
+	setAttr -av ".cp[30].yv";
+	setAttr -av ".cp[30].zv";
+	setAttr -av ".cp[31].xv";
+	setAttr -av ".cp[31].yv";
+	setAttr -av ".cp[31].zv";
+	setAttr -av ".cp[32].xv";
+	setAttr -av ".cp[32].yv";
+	setAttr -av ".cp[32].zv";
+	setAttr -av ".cp[33].xv";
+	setAttr -av ".cp[33].yv";
+	setAttr -av ".cp[33].zv";
+	setAttr -av ".cp[34].xv";
+	setAttr -av ".cp[34].yv";
+	setAttr -av ".cp[34].zv";
+	setAttr -av ".cp[35].xv";
+	setAttr -av ".cp[35].yv";
+	setAttr -av ".cp[35].zv";
+	setAttr -av ".cp[36].xv";
+	setAttr -av ".cp[36].yv";
+	setAttr -av ".cp[36].zv";
+	setAttr -av ".cp[37].xv";
+	setAttr -av ".cp[37].yv";
+	setAttr -av ".cp[37].zv";
+	setAttr ".cc" -type "nurbsCurve" 
+		1 12 0 no 3
+		13 162.38875300000001 166.38875300000001 175.33302499999999 184.277297 188.277297
+		 192.277297 201.22156899999999 210.165841 215.82269500000001 221.47954899999999 227.136403
+		 232.79325800000001 236.79325800000001
+		13
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.39504686044185078 -0.0048616976009463412 -0.0084959460994668209
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.1315480614145888 -0.0048616976009464522 -0.14024534561310506
+		0.13154806141458869 0.12688770191269055 -0.0084959460994668765
+		0.1315480614145888 -0.0048616976009464522 0.12325345341417039
+		0.13154806141458836 -0.1366110971145843 -0.008495946099466932
+		0.13154806141458891 -0.0048616976009464522 -0.0084959460994669042
+		;
+createNode joint -n "joint26" -p "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle9950|grp_off_ctrl_PageGrp_L_p14|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4";
 	rename -uid "C10E4FE7-4B1B-0858-C6D7-59ABE327E446";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
+	setAttr ".t" -type "double3" 0 1.6940658945086007e-21 -8.8817841970012523e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 90 89.999999999999972 0 ;
+	setAttr ".jo" -type "double3" 89.999923182527155 -2.2829458739386725e-09 -180 ;
 	setAttr ".bps" -type "matrix" 1 8.8817841970012523e-16 0 0 -8.8817841970012523e-16 1 0 0
 		 -0 0 1 0 -0.23870159193486382 5.8156573171545851 2.7755575615628914e-17 1;
 	setAttr ".radi" 0.2;
 createNode transform -n "grp_Jnt_PageGrpL" -p "grp_jnt_PageGroup";
 	rename -uid "8827E997-4050-A826-BB05-ECAF30AB2E99";
-createNode joint -n "Jnt_PageGroupL_Bot" -p "|PageGrp_L|grp_jnt_PageGroup|grp_Jnt_PageGrpL";
+createNode joint -n "Jnt_PageGroupL_Bot" -p "grp_Jnt_PageGrpL";
 	rename -uid "C95FA615-42D9-9BFB-76F4-69B683F55423";
 	setAttr ".ove" yes;
 	setAttr ".ovrgbf" yes;
 	setAttr ".ovrgb" -type "float3" 1 1 0.12597102 ;
 	setAttr ".t" -type "double3" -0.17311892506610085 0 -0.046213661342065171 ;
-	setAttr ".r" -type "double3" -3.840873647674921e-05 0.0034060330103303088 90 ;
+	setAttr ".r" -type "double3" -3.840873647674921e-05 0.0034060330103303088 89.378524780273438 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.3;
@@ -3566,13 +7823,13 @@ createNode joint -n "joint41" -p "|PageGrp_L|grp_jnt_PageGroup|grp_Jnt_PageGrpL|
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".bps" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -0.23870159193486382 5.8156573171545851 2.7755575615628914e-17 1;
 	setAttr ".radi" 0.3;
-createNode joint -n "Jnt_PageGroupL_top" -p "|PageGrp_L|grp_jnt_PageGroup|grp_Jnt_PageGrpL";
+createNode joint -n "Jnt_PageGroupL_top" -p "grp_Jnt_PageGrpL";
 	rename -uid "FF2D1C6B-4D72-EFD4-9929-C3A2E5DE78C6";
 	setAttr ".ove" yes;
 	setAttr ".ovrgbf" yes;
 	setAttr ".ovrgb" -type "float3" 0.147651 0.147651 0.018599747 ;
 	setAttr ".t" -type "double3" -0.086002417311961843 0 -0.046213661342065171 ;
-	setAttr ".r" -type "double3" -0.0010539704488347124 -0.00026497449791078765 75.601397926943378 ;
+	setAttr ".r" -type "double3" -0.0010539704488347124 -0.00026497449791078765 75.079349029663462 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.3;
@@ -3701,7 +7958,7 @@ createNode transform -n "ctrl_coverL" -p "grp_OFF_ctrl_coverL";
 	rename -uid "B1EE82CE-4352-7532-E672-199F4876C588";
 	setAttr ".ove" yes;
 	setAttr ".ovrgbf" yes;
-	setAttr ".ovrgb" -type "float3" 0.053311527 0.35221207 1 ;
+	setAttr ".ovrgb" -type "float3" 0.18390584 0.033104796 0.77166778 ;
 	setAttr ".t" -type "double3" 0.00012740497059937628 0 0 ;
 	setAttr -l on ".rx";
 	setAttr -l on ".rz";
@@ -4045,34 +8302,33 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
 		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 641\n            -height 336\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
-		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
+		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
 		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1288\n            -height 717\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
 		+ "            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n"
-		+ "            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n"
-		+ "            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n"
-		+ "            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n"
-		+ "                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n"
-		+ "                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n                $editorName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 1\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n"
-		+ "                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n"
-		+ "                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n"
-		+ "                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n"
-		+ "                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n"
-		+ "                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -connectionMinSegment 0.03\n                -connectionOffset 0.03\n                -connectionRoundness 0.8\n                -connectionTension -100\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n"
-		+ "                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -connectionMinSegment 0.03\n                -connectionOffset 0.03\n                -connectionRoundness 0.8\n                -connectionTension -100\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n"
-		+ "                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n"
-		+ "\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1288\\n    -height 717\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1288\\n    -height 717\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n"
+		+ "            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
+		+ "            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n"
+		+ "                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n"
+		+ "                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n"
+		+ "                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 1\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n"
+		+ "                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n"
+		+ "                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n"
+		+ "                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n"
+		+ "                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -connectionMinSegment 0.03\n                -connectionOffset 0.03\n                -connectionRoundness 0.8\n                -connectionTension -100\n                -defaultPinnedState 0\n"
+		+ "                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n"
+		+ "                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -connectionMinSegment 0.03\n                -connectionOffset 0.03\n                -connectionRoundness 0.8\n                -connectionTension -100\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n"
+		+ "                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1288\\n    -height 717\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1288\\n    -height 717\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -6033,8 +10289,8 @@ createNode polyTweakUV -n "polyTweakUV10";
 		 3.4570694e-06 -0.00022557378 3.7550926e-06 -0.00022530556 2.9802322e-07 -0.00022530556
 		 5.364418e-07 -0.00022557378 3.695488e-06 -0.00022551417 3.5762787e-07 -0.00022551417;
 createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
-	rename -uid "16CFBE37-43C8-1102-BE20-2D9E7AEF78FD";
-	setAttr -s 4 ".tgi";
+	rename -uid "1BDBB401-408A-FE89-6564-D2B50785FEF0";
+	setAttr -s 5 ".tgi";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -1790.0182438893835 -340.47617694688273 ;
 	setAttr ".tgi[0].vh" -type "double2" 3049.5420033642099 970.23805668429884 ;
@@ -6303,54 +10559,397 @@ createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
 	setAttr ".tgi[2].ni[69].y" 1441.4285888671875;
 	setAttr ".tgi[2].ni[69].nvs" 18304;
 	setAttr ".tgi[3].tn" -type "string" "Untitled_4";
-	setAttr ".tgi[3].vl" -type "double2" -2526.0560921656429 -976.19043740015354 ;
-	setAttr ".tgi[3].vh" -type "double2" -116.80094567379781 190.47618290734704 ;
+	setAttr ".tgi[3].vl" -type "double2" -3927.5256313316181 -1114.5121888619647 ;
+	setAttr ".tgi[3].vh" -type "double2" 890.98466165207037 1218.8210517530358 ;
 	setAttr -s 15 ".tgi[3].ni";
-	setAttr ".tgi[3].ni[0].x" -461.42855834960938;
-	setAttr ".tgi[3].ni[0].y" -635.71429443359375;
-	setAttr ".tgi[3].ni[0].nvs" 18304;
-	setAttr ".tgi[3].ni[1].x" -634.28570556640625;
-	setAttr ".tgi[3].ni[1].y" -45.714286804199219;
-	setAttr ".tgi[3].ni[1].nvs" 18305;
-	setAttr ".tgi[3].ni[2].x" -1897.773193359375;
-	setAttr ".tgi[3].ni[2].y" 100.77667999267578;
-	setAttr ".tgi[3].ni[2].nvs" 18306;
-	setAttr ".tgi[3].ni[3].x" -2124.886962890625;
-	setAttr ".tgi[3].ni[3].y" -687.45721435546875;
-	setAttr ".tgi[3].ni[3].nvs" 18306;
-	setAttr ".tgi[3].ni[4].x" -1636.660888671875;
-	setAttr ".tgi[3].ni[4].y" -177.14822387695312;
-	setAttr ".tgi[3].ni[4].nvs" 18306;
-	setAttr ".tgi[3].ni[5].x" -2584.28564453125;
-	setAttr ".tgi[3].ni[5].y" 98.571426391601562;
+	setAttr ".tgi[3].ni[0].x" -1636.660888671875;
+	setAttr ".tgi[3].ni[0].y" -177.14822387695312;
+	setAttr ".tgi[3].ni[0].nvs" 18314;
+	setAttr ".tgi[3].ni[1].x" 90;
+	setAttr ".tgi[3].ni[1].y" -57.142856597900391;
+	setAttr ".tgi[3].ni[1].nvs" 18306;
+	setAttr ".tgi[3].ni[2].x" 397.14285278320312;
+	setAttr ".tgi[3].ni[2].y" -57.142856597900391;
+	setAttr ".tgi[3].ni[2].nvs" 18304;
+	setAttr ".tgi[3].ni[3].x" -634.28570556640625;
+	setAttr ".tgi[3].ni[3].y" 582.85711669921875;
+	setAttr ".tgi[3].ni[3].nvs" 18314;
+	setAttr ".tgi[3].ni[4].x" -768.5714111328125;
+	setAttr ".tgi[3].ni[4].y" -635.71429443359375;
+	setAttr ".tgi[3].ni[4].nvs" 18304;
+	setAttr ".tgi[3].ni[5].x" 397.14285278320312;
+	setAttr ".tgi[3].ni[5].y" -447.14285278320312;
 	setAttr ".tgi[3].ni[5].nvs" 18304;
-	setAttr ".tgi[3].ni[6].x" 90;
-	setAttr ".tgi[3].ni[6].y" -57.142856597900391;
-	setAttr ".tgi[3].ni[6].nvs" 18306;
-	setAttr ".tgi[3].ni[7].x" -2339.203369140625;
-	setAttr ".tgi[3].ni[7].y" -72.029594421386719;
-	setAttr ".tgi[3].ni[7].nvs" 18306;
-	setAttr ".tgi[3].ni[8].x" 397.14285278320312;
-	setAttr ".tgi[3].ni[8].y" -57.142856597900391;
-	setAttr ".tgi[3].ni[8].nvs" 18304;
-	setAttr ".tgi[3].ni[9].x" -634.28570556640625;
-	setAttr ".tgi[3].ni[9].y" 582.85711669921875;
-	setAttr ".tgi[3].ni[9].nvs" 18306;
-	setAttr ".tgi[3].ni[10].x" -1116.943359375;
-	setAttr ".tgi[3].ni[10].y" -319.00375366210938;
-	setAttr ".tgi[3].ni[10].nvs" 18306;
-	setAttr ".tgi[3].ni[11].x" -1545.09375;
-	setAttr ".tgi[3].ni[11].y" -736.8175048828125;
-	setAttr ".tgi[3].ni[11].nvs" 18306;
-	setAttr ".tgi[3].ni[12].x" -768.5714111328125;
-	setAttr ".tgi[3].ni[12].y" -635.71429443359375;
-	setAttr ".tgi[3].ni[12].nvs" 18304;
-	setAttr ".tgi[3].ni[13].x" 397.14285278320312;
-	setAttr ".tgi[3].ni[13].y" -447.14285278320312;
+	setAttr ".tgi[3].ni[6].x" -631.7550048828125;
+	setAttr ".tgi[3].ni[6].y" -219.26866149902344;
+	setAttr ".tgi[3].ni[6].nvs" 18314;
+	setAttr ".tgi[3].ni[7].x" -1545.09375;
+	setAttr ".tgi[3].ni[7].y" -736.8175048828125;
+	setAttr ".tgi[3].ni[7].nvs" 18314;
+	setAttr ".tgi[3].ni[8].x" -1897.773193359375;
+	setAttr ".tgi[3].ni[8].y" 100.77667999267578;
+	setAttr ".tgi[3].ni[8].nvs" 18314;
+	setAttr ".tgi[3].ni[9].x" -461.42855834960938;
+	setAttr ".tgi[3].ni[9].y" -635.71429443359375;
+	setAttr ".tgi[3].ni[9].nvs" 18304;
+	setAttr ".tgi[3].ni[10].x" -2339.203369140625;
+	setAttr ".tgi[3].ni[10].y" -72.029594421386719;
+	setAttr ".tgi[3].ni[10].nvs" 18314;
+	setAttr ".tgi[3].ni[11].x" -1116.943359375;
+	setAttr ".tgi[3].ni[11].y" -319.00375366210938;
+	setAttr ".tgi[3].ni[11].nvs" 18314;
+	setAttr ".tgi[3].ni[12].x" -634.28570556640625;
+	setAttr ".tgi[3].ni[12].y" -45.714286804199219;
+	setAttr ".tgi[3].ni[12].nvs" 18313;
+	setAttr ".tgi[3].ni[13].x" -2584.28564453125;
+	setAttr ".tgi[3].ni[13].y" 98.571426391601562;
 	setAttr ".tgi[3].ni[13].nvs" 18304;
-	setAttr ".tgi[3].ni[14].x" -634.28570556640625;
-	setAttr ".tgi[3].ni[14].y" -147.14285278320312;
-	setAttr ".tgi[3].ni[14].nvs" 18306;
+	setAttr ".tgi[3].ni[14].x" -2124.886962890625;
+	setAttr ".tgi[3].ni[14].y" -687.45721435546875;
+	setAttr ".tgi[3].ni[14].nvs" 18314;
+	setAttr ".tgi[4].tn" -type "string" "Untitled_5";
+	setAttr ".tgi[4].vl" -type "double2" -1133.3332882987147 -548.80950200179359 ;
+	setAttr ".tgi[4].vh" -type "double2" 1133.3332882987147 548.80950200179359 ;
+	setAttr -s 113 ".tgi[4].ni";
+	setAttr ".tgi[4].ni[0].x" 878.5714111328125;
+	setAttr ".tgi[4].ni[0].y" -227.14285278320312;
+	setAttr ".tgi[4].ni[0].nvs" 18304;
+	setAttr ".tgi[4].ni[1].x" 878.5714111328125;
+	setAttr ".tgi[4].ni[1].y" -97.142860412597656;
+	setAttr ".tgi[4].ni[1].nvs" 18304;
+	setAttr ".tgi[4].ni[2].x" 878.5714111328125;
+	setAttr ".tgi[4].ni[2].y" 32.857143402099609;
+	setAttr ".tgi[4].ni[2].nvs" 18304;
+	setAttr ".tgi[4].ni[3].x" 878.5714111328125;
+	setAttr ".tgi[4].ni[3].y" 162.85714721679688;
+	setAttr ".tgi[4].ni[3].nvs" 18304;
+	setAttr ".tgi[4].ni[4].x" 214.28572082519531;
+	setAttr ".tgi[4].ni[4].y" 424.28570556640625;
+	setAttr ".tgi[4].ni[4].nvs" 18304;
+	setAttr ".tgi[4].ni[5].x" 358.57144165039062;
+	setAttr ".tgi[4].ni[5].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[5].nvs" 18304;
+	setAttr ".tgi[4].ni[6].x" -252.85714721679688;
+	setAttr ".tgi[4].ni[6].y" -68.571426391601562;
+	setAttr ".tgi[4].ni[6].nvs" 18304;
+	setAttr ".tgi[4].ni[7].x" -400;
+	setAttr ".tgi[4].ni[7].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[7].nvs" 18304;
+	setAttr ".tgi[4].ni[8].x" 618.5714111328125;
+	setAttr ".tgi[4].ni[8].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[8].nvs" 18304;
+	setAttr ".tgi[4].ni[9].x" 618.5714111328125;
+	setAttr ".tgi[4].ni[9].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[9].nvs" 18304;
+	setAttr ".tgi[4].ni[10].x" -708.5714111328125;
+	setAttr ".tgi[4].ni[10].y" 261.42855834960938;
+	setAttr ".tgi[4].ni[10].nvs" 18304;
+	setAttr ".tgi[4].ni[11].x" -1015.7142944335938;
+	setAttr ".tgi[4].ni[11].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[11].nvs" 18304;
+	setAttr ".tgi[4].ni[12].x" -708.5714111328125;
+	setAttr ".tgi[4].ni[12].y" 391.42855834960938;
+	setAttr ".tgi[4].ni[12].nvs" 18304;
+	setAttr ".tgi[4].ni[13].x" -252.85714721679688;
+	setAttr ".tgi[4].ni[13].y" -170;
+	setAttr ".tgi[4].ni[13].nvs" 18304;
+	setAttr ".tgi[4].ni[14].x" 358.57144165039062;
+	setAttr ".tgi[4].ni[14].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[14].nvs" 18304;
+	setAttr ".tgi[4].ni[15].x" -1015.7142944335938;
+	setAttr ".tgi[4].ni[15].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[15].nvs" 18304;
+	setAttr ".tgi[4].ni[16].x" -252.85714721679688;
+	setAttr ".tgi[4].ni[16].y" 235.71427917480469;
+	setAttr ".tgi[4].ni[16].nvs" 18304;
+	setAttr ".tgi[4].ni[17].x" 358.57144165039062;
+	setAttr ".tgi[4].ni[17].y" 98.571426391601562;
+	setAttr ".tgi[4].ni[17].nvs" 18304;
+	setAttr ".tgi[4].ni[18].x" -708.5714111328125;
+	setAttr ".tgi[4].ni[18].y" -454.28570556640625;
+	setAttr ".tgi[4].ni[18].nvs" 18304;
+	setAttr ".tgi[4].ni[19].x" -252.85714721679688;
+	setAttr ".tgi[4].ni[19].y" 32.857143402099609;
+	setAttr ".tgi[4].ni[19].nvs" 18304;
+	setAttr ".tgi[4].ni[20].x" -252.85714721679688;
+	setAttr ".tgi[4].ni[20].y" 337.14285278320312;
+	setAttr ".tgi[4].ni[20].nvs" 18304;
+	setAttr ".tgi[4].ni[21].x" -400;
+	setAttr ".tgi[4].ni[21].y" 98.571426391601562;
+	setAttr ".tgi[4].ni[21].nvs" 18304;
+	setAttr ".tgi[4].ni[22].x" 618.5714111328125;
+	setAttr ".tgi[4].ni[22].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[22].nvs" 18304;
+	setAttr ".tgi[4].ni[23].x" -252.85714721679688;
+	setAttr ".tgi[4].ni[23].y" 134.28572082519531;
+	setAttr ".tgi[4].ni[23].nvs" 18304;
+	setAttr ".tgi[4].ni[24].x" -708.5714111328125;
+	setAttr ".tgi[4].ni[24].y" 32.857143402099609;
+	setAttr ".tgi[4].ni[24].nvs" 18304;
+	setAttr ".tgi[4].ni[25].x" -708.5714111328125;
+	setAttr ".tgi[4].ni[25].y" -194.28572082519531;
+	setAttr ".tgi[4].ni[25].nvs" 18304;
+	setAttr ".tgi[4].ni[26].x" -708.5714111328125;
+	setAttr ".tgi[4].ni[26].y" -64.285713195800781;
+	setAttr ".tgi[4].ni[26].nvs" 18304;
+	setAttr ".tgi[4].ni[27].x" -708.5714111328125;
+	setAttr ".tgi[4].ni[27].y" 521.4285888671875;
+	setAttr ".tgi[4].ni[27].nvs" 18304;
+	setAttr ".tgi[4].ni[28].x" -1015.7142944335938;
+	setAttr ".tgi[4].ni[28].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[28].nvs" 18304;
+	setAttr ".tgi[4].ni[29].x" -400;
+	setAttr ".tgi[4].ni[29].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[29].nvs" 18304;
+	setAttr ".tgi[4].ni[30].x" -252.85714721679688;
+	setAttr ".tgi[4].ni[30].y" -271.42855834960938;
+	setAttr ".tgi[4].ni[30].nvs" 18304;
+	setAttr ".tgi[4].ni[31].x" 98.571426391601562;
+	setAttr ".tgi[4].ni[31].y" 32.857143402099609;
+	setAttr ".tgi[4].ni[31].nvs" 18304;
+	setAttr ".tgi[4].ni[32].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[32].y" 162.85714721679688;
+	setAttr ".tgi[4].ni[32].nvs" 18304;
+	setAttr ".tgi[4].ni[33].x" 52.857143402099609;
+	setAttr ".tgi[4].ni[33].y" -454.28570556640625;
+	setAttr ".tgi[4].ni[33].nvs" 18304;
+	setAttr ".tgi[4].ni[34].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[34].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[34].nvs" 18304;
+	setAttr ".tgi[4].ni[35].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[35].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[35].nvs" 18304;
+	setAttr ".tgi[4].ni[36].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[36].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[36].nvs" 18304;
+	setAttr ".tgi[4].ni[37].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[37].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[37].nvs" 18304;
+	setAttr ".tgi[4].ni[38].x" 878.5714111328125;
+	setAttr ".tgi[4].ni[38].y" 391.42855834960938;
+	setAttr ".tgi[4].ni[38].nvs" 18304;
+	setAttr ".tgi[4].ni[39].x" 878.5714111328125;
+	setAttr ".tgi[4].ni[39].y" 261.42855834960938;
+	setAttr ".tgi[4].ni[39].nvs" 18304;
+	setAttr ".tgi[4].ni[40].x" 878.5714111328125;
+	setAttr ".tgi[4].ni[40].y" 521.4285888671875;
+	setAttr ".tgi[4].ni[40].nvs" 18304;
+	setAttr ".tgi[4].ni[41].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[41].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[41].nvs" 18304;
+	setAttr ".tgi[4].ni[42].x" 132.85714721679688;
+	setAttr ".tgi[4].ni[42].y" -341.42855834960938;
+	setAttr ".tgi[4].ni[42].nvs" 18304;
+	setAttr ".tgi[4].ni[43].x" 132.85714721679688;
+	setAttr ".tgi[4].ni[43].y" -211.42857360839844;
+	setAttr ".tgi[4].ni[43].nvs" 18304;
+	setAttr ".tgi[4].ni[44].x" 132.85714721679688;
+	setAttr ".tgi[4].ni[44].y" -81.428573608398438;
+	setAttr ".tgi[4].ni[44].nvs" 18304;
+	setAttr ".tgi[4].ni[45].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[45].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[45].nvs" 18304;
+	setAttr ".tgi[4].ni[46].x" 417.14285278320312;
+	setAttr ".tgi[4].ni[46].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[46].nvs" 18304;
+	setAttr ".tgi[4].ni[47].x" 417.14285278320312;
+	setAttr ".tgi[4].ni[47].y" 488.57144165039062;
+	setAttr ".tgi[4].ni[47].nvs" 18304;
+	setAttr ".tgi[4].ni[48].x" 417.14285278320312;
+	setAttr ".tgi[4].ni[48].y" 358.57144165039062;
+	setAttr ".tgi[4].ni[48].nvs" 18304;
+	setAttr ".tgi[4].ni[49].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[49].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[49].nvs" 18304;
+	setAttr ".tgi[4].ni[50].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[50].y" 162.85714721679688;
+	setAttr ".tgi[4].ni[50].nvs" 18304;
+	setAttr ".tgi[4].ni[51].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[51].y" 32.857143402099609;
+	setAttr ".tgi[4].ni[51].nvs" 18304;
+	setAttr ".tgi[4].ni[52].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[52].y" -97.142860412597656;
+	setAttr ".tgi[4].ni[52].nvs" 18304;
+	setAttr ".tgi[4].ni[53].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[53].y" 98.571426391601562;
+	setAttr ".tgi[4].ni[53].nvs" 18304;
+	setAttr ".tgi[4].ni[54].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[54].y" 162.85714721679688;
+	setAttr ".tgi[4].ni[54].nvs" 18304;
+	setAttr ".tgi[4].ni[55].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[55].y" 32.857143402099609;
+	setAttr ".tgi[4].ni[55].nvs" 18304;
+	setAttr ".tgi[4].ni[56].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[56].y" -97.142860412597656;
+	setAttr ".tgi[4].ni[56].nvs" 18304;
+	setAttr ".tgi[4].ni[57].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[57].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[57].nvs" 18304;
+	setAttr ".tgi[4].ni[58].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[58].y" 98.571426391601562;
+	setAttr ".tgi[4].ni[58].nvs" 18304;
+	setAttr ".tgi[4].ni[59].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[59].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[59].nvs" 18304;
+	setAttr ".tgi[4].ni[60].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[60].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[60].nvs" 18304;
+	setAttr ".tgi[4].ni[61].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[61].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[61].nvs" 18304;
+	setAttr ".tgi[4].ni[62].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[62].y" 98.571426391601562;
+	setAttr ".tgi[4].ni[62].nvs" 18304;
+	setAttr ".tgi[4].ni[63].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[63].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[63].nvs" 18304;
+	setAttr ".tgi[4].ni[64].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[64].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[64].nvs" 18304;
+	setAttr ".tgi[4].ni[65].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[65].y" 98.571426391601562;
+	setAttr ".tgi[4].ni[65].nvs" 18304;
+	setAttr ".tgi[4].ni[66].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[66].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[66].nvs" 18304;
+	setAttr ".tgi[4].ni[67].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[67].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[67].nvs" 18304;
+	setAttr ".tgi[4].ni[68].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[68].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[68].nvs" 18304;
+	setAttr ".tgi[4].ni[69].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[69].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[69].nvs" 18304;
+	setAttr ".tgi[4].ni[70].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[70].y" 98.571426391601562;
+	setAttr ".tgi[4].ni[70].nvs" 18304;
+	setAttr ".tgi[4].ni[71].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[71].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[71].nvs" 18304;
+	setAttr ".tgi[4].ni[72].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[72].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[72].nvs" 18304;
+	setAttr ".tgi[4].ni[73].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[73].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[73].nvs" 18304;
+	setAttr ".tgi[4].ni[74].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[74].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[74].nvs" 18304;
+	setAttr ".tgi[4].ni[75].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[75].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[75].nvs" 18304;
+	setAttr ".tgi[4].ni[76].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[76].y" 98.571426391601562;
+	setAttr ".tgi[4].ni[76].nvs" 18304;
+	setAttr ".tgi[4].ni[77].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[77].y" 98.571426391601562;
+	setAttr ".tgi[4].ni[77].nvs" 18304;
+	setAttr ".tgi[4].ni[78].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[78].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[78].nvs" 18304;
+	setAttr ".tgi[4].ni[79].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[79].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[79].nvs" 18304;
+	setAttr ".tgi[4].ni[80].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[80].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[80].nvs" 18304;
+	setAttr ".tgi[4].ni[81].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[81].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[81].nvs" 18304;
+	setAttr ".tgi[4].ni[82].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[82].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[82].nvs" 18304;
+	setAttr ".tgi[4].ni[83].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[83].y" 98.571426391601562;
+	setAttr ".tgi[4].ni[83].nvs" 18304;
+	setAttr ".tgi[4].ni[84].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[84].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[84].nvs" 18304;
+	setAttr ".tgi[4].ni[85].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[85].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[85].nvs" 18304;
+	setAttr ".tgi[4].ni[86].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[86].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[86].nvs" 18304;
+	setAttr ".tgi[4].ni[87].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[87].y" 98.571426391601562;
+	setAttr ".tgi[4].ni[87].nvs" 18304;
+	setAttr ".tgi[4].ni[88].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[88].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[88].nvs" 18304;
+	setAttr ".tgi[4].ni[89].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[89].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[89].nvs" 18304;
+	setAttr ".tgi[4].ni[90].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[90].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[90].nvs" 18304;
+	setAttr ".tgi[4].ni[91].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[91].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[91].nvs" 18304;
+	setAttr ".tgi[4].ni[92].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[92].y" 98.571426391601562;
+	setAttr ".tgi[4].ni[92].nvs" 18304;
+	setAttr ".tgi[4].ni[93].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[93].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[93].nvs" 18304;
+	setAttr ".tgi[4].ni[94].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[94].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[94].nvs" 18304;
+	setAttr ".tgi[4].ni[95].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[95].y" 98.571426391601562;
+	setAttr ".tgi[4].ni[95].nvs" 18304;
+	setAttr ".tgi[4].ni[96].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[96].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[96].nvs" 18304;
+	setAttr ".tgi[4].ni[97].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[97].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[97].nvs" 18304;
+	setAttr ".tgi[4].ni[98].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[98].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[98].nvs" 18304;
+	setAttr ".tgi[4].ni[99].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[99].y" 98.571426391601562;
+	setAttr ".tgi[4].ni[99].nvs" 18304;
+	setAttr ".tgi[4].ni[100].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[100].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[100].nvs" 18304;
+	setAttr ".tgi[4].ni[101].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[101].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[101].nvs" 18304;
+	setAttr ".tgi[4].ni[102].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[102].y" 98.571426391601562;
+	setAttr ".tgi[4].ni[102].nvs" 18304;
+	setAttr ".tgi[4].ni[103].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[103].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[103].nvs" 18304;
+	setAttr ".tgi[4].ni[104].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[104].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[104].nvs" 18304;
+	setAttr ".tgi[4].ni[105].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[105].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[105].nvs" 18304;
+	setAttr ".tgi[4].ni[106].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[106].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[106].nvs" 18304;
+	setAttr ".tgi[4].ni[107].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[107].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[107].nvs" 18304;
+	setAttr ".tgi[4].ni[108].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[108].y" 98.571426391601562;
+	setAttr ".tgi[4].ni[108].nvs" 18304;
+	setAttr ".tgi[4].ni[109].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[109].y" -161.42857360839844;
+	setAttr ".tgi[4].ni[109].nvs" 18304;
+	setAttr ".tgi[4].ni[110].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[110].y" 228.57142639160156;
+	setAttr ".tgi[4].ni[110].nvs" 18304;
+	setAttr ".tgi[4].ni[111].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[111].y" -31.428571701049805;
+	setAttr ".tgi[4].ni[111].nvs" 18304;
+	setAttr ".tgi[4].ni[112].x" -92.857139587402344;
+	setAttr ".tgi[4].ni[112].y" 98.571426391601562;
+	setAttr ".tgi[4].ni[112].nvs" 18304;
 select -ne :time1;
 	setAttr ".o" 45;
 	setAttr ".unw" 45;
@@ -6398,88 +10997,103 @@ select -ne :ikSystem;
 connectAttr "polyTweakUV4.out" "couvertureShape.i";
 connectAttr "polyTweakUV4.uvtk[0]" "couvertureShape.uvst[0].uvtw";
 connectAttr "transformGeometry1.og" "couvertureShapeOrig.i";
-connectAttr "polyTweakUV10.out" "|PageGrp_L1|GEOpageR|GEOpageRShape.i";
-connectAttr "polyTweakUV10.uvtk[0]" "|PageGrp_L1|GEOpageR|GEOpageRShape.uvst[0].uvtw"
+connectAttr "polyTweakUV10.out" "|PageGrp_R|GEOpageR|GEOpageRShape.i";
+connectAttr "polyTweakUV10.uvtk[0]" "|PageGrp_R|GEOpageR|GEOpageRShape.uvst[0].uvtw"
 		;
-connectAttr "skinCluster8.og[0]" "|PageGrp_L1|ribbon|L1|LShape1.cr";
-connectAttr "skinCluster7.og[0]" "|PageGrp_L1|ribbon|R1|RShape1.cr";
-connectAttr "lyr_jnt.di" "|PageGrp_L1|grp_Jnt_PageGrpL.do";
+connectAttr "skinCluster8.og[0]" "|PageGrp_R|ribbon|L1|LShape1.cr";
+connectAttr "skinCluster7.og[0]" "|PageGrp_R|ribbon|R1|RShape1.cr";
 connectAttr "unitConversion18.o" "Jnt_PageGroupR_Bot.rz";
-connectAttr "Jnt_PageGroupR_Bot.s" "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38.is"
+connectAttr "lyr_jnt.di" "Jnt_PageGroupR_Bot.do";
+connectAttr "Jnt_PageGroupR_Bot.s" "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38.is"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38.s" "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39.is"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38.s" "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39.is"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39.s" "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39|joint40.is"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39.s" "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39|joint40.is"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39|joint40.s" "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39|joint40|joint41.is"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39|joint40.s" "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39|joint40|joint41.is"
 		;
 connectAttr "Jnt_PageGroupR_top_rotateZ.o" "Jnt_PageGroupR_top.rz";
-connectAttr "Jnt_PageGroupR_top.s" "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34.is"
+connectAttr "lyr_jnt.di" "Jnt_PageGroupR_top.do";
+connectAttr "Jnt_PageGroupR_top.s" "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34.is"
 		;
-connectAttr "joint34_rotateZ1.o" "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34.rz"
+connectAttr "joint34_rotateZ1.o" "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34.rz"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34.s" "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35.is"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34.s" "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35.is"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35.s" "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35|joint36.is"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35.s" "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35|joint36.is"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35|joint36.s" "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35|joint36|joint37.is"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35|joint36.s" "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35|joint36|joint37.is"
 		;
 connectAttr "L1FollicleShape50.ot" "L1Follicle50.t" -l on;
 connectAttr "L1FollicleShape50.or" "L1Follicle50.r" -l on;
-connectAttr "|PageGrp_L1|ribbon|L1|LShape1.wm" "L1FollicleShape50.iwm";
-connectAttr "|PageGrp_L1|ribbon|L1|LShape1.l" "L1FollicleShape50.is";
+connectAttr "|PageGrp_R|ribbon|L1|LShape1.wm" "L1FollicleShape50.iwm";
+connectAttr "|PageGrp_R|ribbon|L1|LShape1.l" "L1FollicleShape50.is";
+connectAttr "lyr_jnt.di" "joint43.do";
 connectAttr "L1FollicleShape1750.ot" "L1Follicle1750.t" -l on;
 connectAttr "L1FollicleShape1750.or" "L1Follicle1750.r" -l on;
-connectAttr "|PageGrp_L1|ribbon|L1|LShape1.wm" "L1FollicleShape1750.iwm";
-connectAttr "|PageGrp_L1|ribbon|L1|LShape1.l" "L1FollicleShape1750.is";
+connectAttr "|PageGrp_R|ribbon|L1|LShape1.wm" "L1FollicleShape1750.iwm";
+connectAttr "|PageGrp_R|ribbon|L1|LShape1.l" "L1FollicleShape1750.is";
+connectAttr "lyr_jnt.di" "joint44.do";
 connectAttr "L1FollicleShape3350.ot" "L1Follicle3350.t" -l on;
 connectAttr "L1FollicleShape3350.or" "L1Follicle3350.r" -l on;
-connectAttr "|PageGrp_L1|ribbon|L1|LShape1.wm" "L1FollicleShape3350.iwm";
-connectAttr "|PageGrp_L1|ribbon|L1|LShape1.l" "L1FollicleShape3350.is";
+connectAttr "|PageGrp_R|ribbon|L1|LShape1.wm" "L1FollicleShape3350.iwm";
+connectAttr "|PageGrp_R|ribbon|L1|LShape1.l" "L1FollicleShape3350.is";
+connectAttr "lyr_jnt.di" "joint45.do";
 connectAttr "L1FollicleShape5050.ot" "L1Follicle5050.t" -l on;
 connectAttr "L1FollicleShape5050.or" "L1Follicle5050.r" -l on;
-connectAttr "|PageGrp_L1|ribbon|L1|LShape1.wm" "L1FollicleShape5050.iwm";
-connectAttr "|PageGrp_L1|ribbon|L1|LShape1.l" "L1FollicleShape5050.is";
+connectAttr "|PageGrp_R|ribbon|L1|LShape1.wm" "L1FollicleShape5050.iwm";
+connectAttr "|PageGrp_R|ribbon|L1|LShape1.l" "L1FollicleShape5050.is";
+connectAttr "lyr_jnt.di" "joint46.do";
 connectAttr "L1FollicleShape6650.ot" "L1Follicle6650.t" -l on;
 connectAttr "L1FollicleShape6650.or" "L1Follicle6650.r" -l on;
-connectAttr "|PageGrp_L1|ribbon|L1|LShape1.wm" "L1FollicleShape6650.iwm";
-connectAttr "|PageGrp_L1|ribbon|L1|LShape1.l" "L1FollicleShape6650.is";
+connectAttr "|PageGrp_R|ribbon|L1|LShape1.wm" "L1FollicleShape6650.iwm";
+connectAttr "|PageGrp_R|ribbon|L1|LShape1.l" "L1FollicleShape6650.is";
+connectAttr "lyr_jnt.di" "joint47.do";
 connectAttr "L1FollicleShape8350.ot" "L1Follicle8350.t" -l on;
 connectAttr "L1FollicleShape8350.or" "L1Follicle8350.r" -l on;
-connectAttr "|PageGrp_L1|ribbon|L1|LShape1.wm" "L1FollicleShape8350.iwm";
-connectAttr "|PageGrp_L1|ribbon|L1|LShape1.l" "L1FollicleShape8350.is";
+connectAttr "|PageGrp_R|ribbon|L1|LShape1.wm" "L1FollicleShape8350.iwm";
+connectAttr "|PageGrp_R|ribbon|L1|LShape1.l" "L1FollicleShape8350.is";
+connectAttr "lyr_jnt.di" "joint48.do";
 connectAttr "L1FollicleShape9950.ot" "L1Follicle9950.t" -l on;
 connectAttr "L1FollicleShape9950.or" "L1Follicle9950.r" -l on;
-connectAttr "|PageGrp_L1|ribbon|L1|LShape1.wm" "L1FollicleShape9950.iwm";
-connectAttr "|PageGrp_L1|ribbon|L1|LShape1.l" "L1FollicleShape9950.is";
+connectAttr "|PageGrp_R|ribbon|L1|LShape1.wm" "L1FollicleShape9950.iwm";
+connectAttr "|PageGrp_R|ribbon|L1|LShape1.l" "L1FollicleShape9950.is";
+connectAttr "lyr_jnt.di" "joint49.do";
 connectAttr "R1FollicleShape50.ot" "R1Follicle50.t" -l on;
 connectAttr "R1FollicleShape50.or" "R1Follicle50.r" -l on;
-connectAttr "|PageGrp_L1|ribbon|R1|RShape1.wm" "R1FollicleShape50.iwm";
-connectAttr "|PageGrp_L1|ribbon|R1|RShape1.l" "R1FollicleShape50.is";
+connectAttr "|PageGrp_R|ribbon|R1|RShape1.wm" "R1FollicleShape50.iwm";
+connectAttr "|PageGrp_R|ribbon|R1|RShape1.l" "R1FollicleShape50.is";
+connectAttr "lyr_jnt.di" "joint50.do";
 connectAttr "R1FollicleShape1750.ot" "R1Follicle1750.t" -l on;
 connectAttr "R1FollicleShape1750.or" "R1Follicle1750.r" -l on;
-connectAttr "|PageGrp_L1|ribbon|R1|RShape1.wm" "R1FollicleShape1750.iwm";
-connectAttr "|PageGrp_L1|ribbon|R1|RShape1.l" "R1FollicleShape1750.is";
+connectAttr "|PageGrp_R|ribbon|R1|RShape1.wm" "R1FollicleShape1750.iwm";
+connectAttr "|PageGrp_R|ribbon|R1|RShape1.l" "R1FollicleShape1750.is";
+connectAttr "lyr_jnt.di" "joint51.do";
 connectAttr "R1FollicleShape3350.ot" "R1Follicle3350.t" -l on;
 connectAttr "R1FollicleShape3350.or" "R1Follicle3350.r" -l on;
-connectAttr "|PageGrp_L1|ribbon|R1|RShape1.wm" "R1FollicleShape3350.iwm";
-connectAttr "|PageGrp_L1|ribbon|R1|RShape1.l" "R1FollicleShape3350.is";
+connectAttr "|PageGrp_R|ribbon|R1|RShape1.wm" "R1FollicleShape3350.iwm";
+connectAttr "|PageGrp_R|ribbon|R1|RShape1.l" "R1FollicleShape3350.is";
+connectAttr "lyr_jnt.di" "joint52.do";
 connectAttr "R1FollicleShape5050.ot" "R1Follicle5050.t" -l on;
 connectAttr "R1FollicleShape5050.or" "R1Follicle5050.r" -l on;
-connectAttr "|PageGrp_L1|ribbon|R1|RShape1.wm" "R1FollicleShape5050.iwm";
-connectAttr "|PageGrp_L1|ribbon|R1|RShape1.l" "R1FollicleShape5050.is";
+connectAttr "|PageGrp_R|ribbon|R1|RShape1.wm" "R1FollicleShape5050.iwm";
+connectAttr "|PageGrp_R|ribbon|R1|RShape1.l" "R1FollicleShape5050.is";
+connectAttr "lyr_jnt.di" "joint53.do";
 connectAttr "R1FollicleShape6650.ot" "R1Follicle6650.t" -l on;
 connectAttr "R1FollicleShape6650.or" "R1Follicle6650.r" -l on;
-connectAttr "|PageGrp_L1|ribbon|R1|RShape1.wm" "R1FollicleShape6650.iwm";
-connectAttr "|PageGrp_L1|ribbon|R1|RShape1.l" "R1FollicleShape6650.is";
+connectAttr "|PageGrp_R|ribbon|R1|RShape1.wm" "R1FollicleShape6650.iwm";
+connectAttr "|PageGrp_R|ribbon|R1|RShape1.l" "R1FollicleShape6650.is";
+connectAttr "lyr_jnt.di" "joint54.do";
 connectAttr "R1FollicleShape8350.ot" "R1Follicle8350.t" -l on;
 connectAttr "R1FollicleShape8350.or" "R1Follicle8350.r" -l on;
-connectAttr "|PageGrp_L1|ribbon|R1|RShape1.wm" "R1FollicleShape8350.iwm";
-connectAttr "|PageGrp_L1|ribbon|R1|RShape1.l" "R1FollicleShape8350.is";
+connectAttr "|PageGrp_R|ribbon|R1|RShape1.wm" "R1FollicleShape8350.iwm";
+connectAttr "|PageGrp_R|ribbon|R1|RShape1.l" "R1FollicleShape8350.is";
+connectAttr "lyr_jnt.di" "joint55.do";
 connectAttr "R1FollicleShape9950.ot" "R1Follicle9950.t" -l on;
 connectAttr "R1FollicleShape9950.or" "R1Follicle9950.r" -l on;
-connectAttr "|PageGrp_L1|ribbon|R1|RShape1.wm" "R1FollicleShape9950.iwm";
-connectAttr "|PageGrp_L1|ribbon|R1|RShape1.l" "R1FollicleShape9950.is";
+connectAttr "|PageGrp_R|ribbon|R1|RShape1.wm" "R1FollicleShape9950.iwm";
+connectAttr "|PageGrp_R|ribbon|R1|RShape1.l" "R1FollicleShape9950.is";
+connectAttr "lyr_jnt.di" "joint56.do";
 connectAttr "skinCluster9.og[0]" "ffd2LatticeShape.li";
 connectAttr "polyTweakUV9.out" "|PageGrp_L|GEOpageR|GEOpageRShape.i";
 connectAttr "polyTweakUV9.uvtk[0]" "|PageGrp_L|GEOpageR|GEOpageRShape.uvst[0].uvtw"
@@ -6488,75 +11102,89 @@ connectAttr "skinCluster3.og[0]" "ffd1LatticeShape.li";
 connectAttr "skinCluster4.og[0]" "|PageGrp_L|ribbon|L1|LShape1.cr";
 connectAttr "makeNurbPlane1.os" "|PageGrp_L|ribbon|L1|LShape1Orig.cr";
 connectAttr "skinCluster5.og[0]" "|PageGrp_L|ribbon|R1|RShape1.cr";
-connectAttr "lyr_jnt.di" "grp_jnt_PageGroup.do";
 connectAttr "nurbsPlane2FollicleShape50.ot" "nurbsPlane2Follicle50.t" -l on;
 connectAttr "nurbsPlane2FollicleShape50.or" "nurbsPlane2Follicle50.r" -l on;
 connectAttr "|PageGrp_L|ribbon|R1|RShape1.wm" "nurbsPlane2FollicleShape50.iwm";
 connectAttr "|PageGrp_L|ribbon|R1|RShape1.l" "nurbsPlane2FollicleShape50.is";
+connectAttr "lyr_jnt.di" "joint27.do";
 connectAttr "nurbsPlane2FollicleShape1750.ot" "nurbsPlane2Follicle1750.t" -l on;
 connectAttr "nurbsPlane2FollicleShape1750.or" "nurbsPlane2Follicle1750.r" -l on;
 connectAttr "|PageGrp_L|ribbon|R1|RShape1.wm" "nurbsPlane2FollicleShape1750.iwm"
 		;
 connectAttr "|PageGrp_L|ribbon|R1|RShape1.l" "nurbsPlane2FollicleShape1750.is";
+connectAttr "lyr_jnt.di" "joint28.do";
 connectAttr "nurbsPlane2FollicleShape3350.ot" "nurbsPlane2Follicle3350.t" -l on;
 connectAttr "nurbsPlane2FollicleShape3350.or" "nurbsPlane2Follicle3350.r" -l on;
 connectAttr "|PageGrp_L|ribbon|R1|RShape1.wm" "nurbsPlane2FollicleShape3350.iwm"
 		;
 connectAttr "|PageGrp_L|ribbon|R1|RShape1.l" "nurbsPlane2FollicleShape3350.is";
+connectAttr "lyr_jnt.di" "joint29.do";
 connectAttr "nurbsPlane2FollicleShape5050.ot" "nurbsPlane2Follicle5050.t" -l on;
 connectAttr "nurbsPlane2FollicleShape5050.or" "nurbsPlane2Follicle5050.r" -l on;
 connectAttr "|PageGrp_L|ribbon|R1|RShape1.wm" "nurbsPlane2FollicleShape5050.iwm"
 		;
 connectAttr "|PageGrp_L|ribbon|R1|RShape1.l" "nurbsPlane2FollicleShape5050.is";
+connectAttr "lyr_jnt.di" "joint30.do";
 connectAttr "nurbsPlane2FollicleShape6650.ot" "nurbsPlane2Follicle6650.t" -l on;
 connectAttr "nurbsPlane2FollicleShape6650.or" "nurbsPlane2Follicle6650.r" -l on;
 connectAttr "|PageGrp_L|ribbon|R1|RShape1.wm" "nurbsPlane2FollicleShape6650.iwm"
 		;
 connectAttr "|PageGrp_L|ribbon|R1|RShape1.l" "nurbsPlane2FollicleShape6650.is";
+connectAttr "lyr_jnt.di" "joint31.do";
 connectAttr "nurbsPlane2FollicleShape8350.ot" "nurbsPlane2Follicle8350.t" -l on;
 connectAttr "nurbsPlane2FollicleShape8350.or" "nurbsPlane2Follicle8350.r" -l on;
 connectAttr "|PageGrp_L|ribbon|R1|RShape1.wm" "nurbsPlane2FollicleShape8350.iwm"
 		;
 connectAttr "|PageGrp_L|ribbon|R1|RShape1.l" "nurbsPlane2FollicleShape8350.is";
+connectAttr "lyr_jnt.di" "joint32.do";
 connectAttr "nurbsPlane2FollicleShape9950.ot" "nurbsPlane2Follicle9950.t" -l on;
 connectAttr "nurbsPlane2FollicleShape9950.or" "nurbsPlane2Follicle9950.r" -l on;
 connectAttr "|PageGrp_L|ribbon|R1|RShape1.wm" "nurbsPlane2FollicleShape9950.iwm"
 		;
 connectAttr "|PageGrp_L|ribbon|R1|RShape1.l" "nurbsPlane2FollicleShape9950.is";
+connectAttr "lyr_jnt.di" "joint33.do";
 connectAttr "nurbsPlane1FollicleShape50.ot" "nurbsPlane1Follicle50.t" -l on;
 connectAttr "nurbsPlane1FollicleShape50.or" "nurbsPlane1Follicle50.r" -l on;
 connectAttr "|PageGrp_L|ribbon|L1|LShape1.wm" "nurbsPlane1FollicleShape50.iwm";
 connectAttr "|PageGrp_L|ribbon|L1|LShape1.l" "nurbsPlane1FollicleShape50.is";
+connectAttr "lyr_jnt.di" "joint20.do";
 connectAttr "nurbsPlane1FollicleShape1750.ot" "nurbsPlane1Follicle1750.t" -l on;
 connectAttr "nurbsPlane1FollicleShape1750.or" "nurbsPlane1Follicle1750.r" -l on;
 connectAttr "|PageGrp_L|ribbon|L1|LShape1.wm" "nurbsPlane1FollicleShape1750.iwm"
 		;
 connectAttr "|PageGrp_L|ribbon|L1|LShape1.l" "nurbsPlane1FollicleShape1750.is";
+connectAttr "lyr_jnt.di" "joint21.do";
 connectAttr "nurbsPlane1FollicleShape3350.ot" "nurbsPlane1Follicle3350.t" -l on;
 connectAttr "nurbsPlane1FollicleShape3350.or" "nurbsPlane1Follicle3350.r" -l on;
 connectAttr "|PageGrp_L|ribbon|L1|LShape1.wm" "nurbsPlane1FollicleShape3350.iwm"
 		;
 connectAttr "|PageGrp_L|ribbon|L1|LShape1.l" "nurbsPlane1FollicleShape3350.is";
+connectAttr "lyr_jnt.di" "joint22.do";
 connectAttr "nurbsPlane1FollicleShape5050.ot" "nurbsPlane1Follicle5050.t" -l on;
 connectAttr "nurbsPlane1FollicleShape5050.or" "nurbsPlane1Follicle5050.r" -l on;
 connectAttr "|PageGrp_L|ribbon|L1|LShape1.wm" "nurbsPlane1FollicleShape5050.iwm"
 		;
 connectAttr "|PageGrp_L|ribbon|L1|LShape1.l" "nurbsPlane1FollicleShape5050.is";
+connectAttr "lyr_jnt.di" "joint23.do";
 connectAttr "nurbsPlane1FollicleShape6650.ot" "nurbsPlane1Follicle6650.t" -l on;
 connectAttr "nurbsPlane1FollicleShape6650.or" "nurbsPlane1Follicle6650.r" -l on;
 connectAttr "|PageGrp_L|ribbon|L1|LShape1.wm" "nurbsPlane1FollicleShape6650.iwm"
 		;
 connectAttr "|PageGrp_L|ribbon|L1|LShape1.l" "nurbsPlane1FollicleShape6650.is";
+connectAttr "lyr_jnt.di" "joint24.do";
 connectAttr "nurbsPlane1FollicleShape8350.ot" "nurbsPlane1Follicle8350.t" -l on;
 connectAttr "nurbsPlane1FollicleShape8350.or" "nurbsPlane1Follicle8350.r" -l on;
 connectAttr "|PageGrp_L|ribbon|L1|LShape1.wm" "nurbsPlane1FollicleShape8350.iwm"
 		;
 connectAttr "|PageGrp_L|ribbon|L1|LShape1.l" "nurbsPlane1FollicleShape8350.is";
+connectAttr "lyr_jnt.di" "joint25.do";
 connectAttr "nurbsPlane1FollicleShape9950.ot" "nurbsPlane1Follicle9950.t" -l on;
 connectAttr "nurbsPlane1FollicleShape9950.or" "nurbsPlane1Follicle9950.r" -l on;
 connectAttr "|PageGrp_L|ribbon|L1|LShape1.wm" "nurbsPlane1FollicleShape9950.iwm"
 		;
 connectAttr "|PageGrp_L|ribbon|L1|LShape1.l" "nurbsPlane1FollicleShape9950.is";
+connectAttr "lyr_jnt.di" "joint26.do";
+connectAttr "lyr_jnt.di" "grp_Jnt_PageGrpL.do";
 connectAttr "unitConversion7.o" "Jnt_PageGroupL_Bot.rz";
 connectAttr "Jnt_PageGroupL_Bot.s" "|PageGrp_L|grp_jnt_PageGroup|grp_Jnt_PageGrpL|Jnt_PageGroupL_Bot|joint38.is"
 		;
@@ -6857,11 +11485,11 @@ connectAttr "condition1.ocr" "joint34_rotateZ.i";
 connectAttr "floatMath1.of" "condition1.ft";
 connectAttr "floatMath2.of" "condition1.cfr";
 connectAttr "unitConversion5.o" "condition1.ctr";
-connectAttr "|PageGrp_L|grp_OFF_ctrl_PageGroup_L|curve3.ry" "unitConversion5.i";
+connectAttr "ctrl_PageGroup_turn_L.ry" "unitConversion5.i";
 connectAttr "condition1.ocr" "unitConversion7.i";
 connectAttr "floatMath3.of" "floatMath1._fa";
 connectAttr "unitConversion9.o" "floatMath1._fb";
-connectAttr "|PageGrp_L|grp_OFF_ctrl_PageGroup_L|curve3.ry" "unitConversion9.i";
+connectAttr "ctrl_PageGroup_turn_L.ry" "unitConversion9.i";
 connectAttr "unitConversion10.o" "floatMath2._fa";
 connectAttr "ctrl_coverL.ry" "unitConversion10.i";
 connectAttr "unitConversion11.o" "floatMath3._fa";
@@ -6871,43 +11499,43 @@ connectAttr "GEOpageRShapeOrig2.o" "ffd2.orggeom[0]";
 connectAttr "ffd2LatticeShape.wm" "ffd2.dlm";
 connectAttr "ffd2LatticeShape.lo" "ffd2.dlp";
 connectAttr "ffd2BaseShape.wm" "ffd2.blm";
-connectAttr "|PageGrp_L1|ribbon|R1|RShape1Orig.ws" "skinCluster7.ip[0].ig";
-connectAttr "|PageGrp_L1|ribbon|R1|RShape1Orig.l" "skinCluster7.orggeom[0]";
+connectAttr "|PageGrp_R|ribbon|R1|RShape1Orig.ws" "skinCluster7.ip[0].ig";
+connectAttr "|PageGrp_R|ribbon|R1|RShape1Orig.l" "skinCluster7.orggeom[0]";
 connectAttr "bindPose7.msg" "skinCluster7.bp";
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35|joint36|joint37.wm" "skinCluster7.ma[0]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35|joint36|joint37.wm" "skinCluster7.ma[0]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35|joint36.wm" "skinCluster7.ma[1]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35|joint36.wm" "skinCluster7.ma[1]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35.wm" "skinCluster7.ma[2]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35.wm" "skinCluster7.ma[2]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34.wm" "skinCluster7.ma[3]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34.wm" "skinCluster7.ma[3]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35|joint36|joint37.liw" "skinCluster7.lw[0]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35|joint36|joint37.liw" "skinCluster7.lw[0]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35|joint36.liw" "skinCluster7.lw[1]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35|joint36.liw" "skinCluster7.lw[1]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35.liw" "skinCluster7.lw[2]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35.liw" "skinCluster7.lw[2]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34.liw" "skinCluster7.lw[3]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34.liw" "skinCluster7.lw[3]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35|joint36|joint37.obcc" "skinCluster7.ifcl[0]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35|joint36|joint37.obcc" "skinCluster7.ifcl[0]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35|joint36.obcc" "skinCluster7.ifcl[1]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35|joint36.obcc" "skinCluster7.ifcl[1]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35.obcc" "skinCluster7.ifcl[2]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35.obcc" "skinCluster7.ifcl[2]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34.obcc" "skinCluster7.ifcl[3]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34.obcc" "skinCluster7.ifcl[3]"
 		;
-connectAttr "PageGrp_L1.msg" "bindPose7.m[0]";
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL.msg" "bindPose7.m[1]";
+connectAttr "PageGrp_R.msg" "bindPose7.m[0]";
+connectAttr "grp_Jnt_PageGrpR.msg" "bindPose7.m[1]";
 connectAttr "Jnt_PageGroupR_top.msg" "bindPose7.m[2]";
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34.msg" "bindPose7.m[3]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34.msg" "bindPose7.m[3]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35.msg" "bindPose7.m[4]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35.msg" "bindPose7.m[4]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35|joint36.msg" "bindPose7.m[5]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35|joint36.msg" "bindPose7.m[5]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_top|joint34|joint35|joint36|joint37.msg" "bindPose7.m[6]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_top|joint34|joint35|joint36|joint37.msg" "bindPose7.m[6]"
 		;
 connectAttr "bindPose7.w" "bindPose7.p[0]";
 connectAttr "bindPose7.m[0]" "bindPose7.p[1]";
@@ -6916,43 +11544,43 @@ connectAttr "bindPose7.m[2]" "bindPose7.p[3]";
 connectAttr "bindPose7.m[3]" "bindPose7.p[4]";
 connectAttr "bindPose7.m[4]" "bindPose7.p[5]";
 connectAttr "bindPose7.m[5]" "bindPose7.p[6]";
-connectAttr "|PageGrp_L1|ribbon|L1|LShape1Orig.ws" "skinCluster8.ip[0].ig";
-connectAttr "|PageGrp_L1|ribbon|L1|LShape1Orig.l" "skinCluster8.orggeom[0]";
+connectAttr "|PageGrp_R|ribbon|L1|LShape1Orig.ws" "skinCluster8.ip[0].ig";
+connectAttr "|PageGrp_R|ribbon|L1|LShape1Orig.l" "skinCluster8.orggeom[0]";
 connectAttr "bindPose8.msg" "skinCluster8.bp";
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39|joint40|joint41.wm" "skinCluster8.ma[0]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39|joint40|joint41.wm" "skinCluster8.ma[0]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39|joint40.wm" "skinCluster8.ma[1]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39|joint40.wm" "skinCluster8.ma[1]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39.wm" "skinCluster8.ma[2]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39.wm" "skinCluster8.ma[2]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38.wm" "skinCluster8.ma[3]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38.wm" "skinCluster8.ma[3]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39|joint40|joint41.liw" "skinCluster8.lw[0]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39|joint40|joint41.liw" "skinCluster8.lw[0]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39|joint40.liw" "skinCluster8.lw[1]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39|joint40.liw" "skinCluster8.lw[1]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39.liw" "skinCluster8.lw[2]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39.liw" "skinCluster8.lw[2]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38.liw" "skinCluster8.lw[3]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38.liw" "skinCluster8.lw[3]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39|joint40|joint41.obcc" "skinCluster8.ifcl[0]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39|joint40|joint41.obcc" "skinCluster8.ifcl[0]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39|joint40.obcc" "skinCluster8.ifcl[1]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39|joint40.obcc" "skinCluster8.ifcl[1]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39.obcc" "skinCluster8.ifcl[2]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39.obcc" "skinCluster8.ifcl[2]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38.obcc" "skinCluster8.ifcl[3]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38.obcc" "skinCluster8.ifcl[3]"
 		;
-connectAttr "PageGrp_L1.msg" "bindPose8.m[0]";
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL.msg" "bindPose8.m[1]";
+connectAttr "PageGrp_R.msg" "bindPose8.m[0]";
+connectAttr "grp_Jnt_PageGrpR.msg" "bindPose8.m[1]";
 connectAttr "Jnt_PageGroupR_Bot.msg" "bindPose8.m[2]";
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38.msg" "bindPose8.m[3]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38.msg" "bindPose8.m[3]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39.msg" "bindPose8.m[4]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39.msg" "bindPose8.m[4]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39|joint40.msg" "bindPose8.m[5]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39|joint40.msg" "bindPose8.m[5]"
 		;
-connectAttr "|PageGrp_L1|grp_Jnt_PageGrpL|Jnt_PageGroupR_Bot|joint38|joint39|joint40|joint41.msg" "bindPose8.m[6]"
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|Jnt_PageGroupR_Bot|joint38|joint39|joint40|joint41.msg" "bindPose8.m[6]"
 		;
 connectAttr "bindPose8.w" "bindPose8.p[0]";
 connectAttr "bindPose8.m[0]" "bindPose8.p[1]";
@@ -7087,13 +11715,11 @@ connectAttr "floatMath5.of" "condition2.cfr";
 connectAttr "unitConversion20.o" "condition2.ctr";
 connectAttr "unitConversion14.o" "floatMath4._fa";
 connectAttr "unitConversion15.o" "floatMath4._fb";
-connectAttr "|PageGrp_L1|grp_OFF_ctrl_PageGroup_L|curve3.ry" "unitConversion14.i"
-		;
+connectAttr "ctrl_PageGroup_turn_R.ry" "unitConversion14.i";
 connectAttr "ctrl_coverR.ry" "unitConversion15.i";
 connectAttr "floatMath6.of" "floatMath5._fa";
 connectAttr "condition2.ocr" "unitConversion18.i";
-connectAttr "|PageGrp_L1|grp_OFF_ctrl_PageGroup_L|curve3.ry" "unitConversion20.i"
-		;
+connectAttr "ctrl_PageGroup_turn_R.ry" "unitConversion20.i";
 connectAttr "unitConversion21.o" "floatMath6._fa";
 connectAttr "ctrl_coverR.ry" "unitConversion21.i";
 connectAttr "layerManager.dli[1]" "lyr_jnt.id";
@@ -7113,7 +11739,7 @@ connectAttr "ffd1.og[0]" "polyTweakUV9.ip";
 connectAttr "ffd2.og[0]" "polyTweakUV10.ip";
 connectAttr "floatMath3.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn";
 connectAttr "ctrl_coverL.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn";
-connectAttr "|PageGrp_L|grp_OFF_ctrl_PageGroup_L|curve3.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "ctrl_PageGroup_turn_L.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
 connectAttr "floatMath2.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn";
 connectAttr "condition1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn";
@@ -7140,7 +11766,7 @@ connectAttr "nurbsPlane1Follicle50.msg" "MayaNodeEditorSavedTabsInfo.tgi[2].ni[4
 connectAttr "nurbsPlane2FollicleShape6650.msg" "MayaNodeEditorSavedTabsInfo.tgi[2].ni[5].dn"
 		;
 connectAttr "bindPose5.msg" "MayaNodeEditorSavedTabsInfo.tgi[2].ni[6].dn";
-connectAttr "|PageGrp_L|grp_OFF_ctrl_PageGroup_L|curve3.msg" "MayaNodeEditorSavedTabsInfo.tgi[2].ni[7].dn"
+connectAttr "ctrl_PageGroup_turn_L.msg" "MayaNodeEditorSavedTabsInfo.tgi[2].ni[7].dn"
 		;
 connectAttr "Jnt_PageGroupL_Bot.msg" "MayaNodeEditorSavedTabsInfo.tgi[2].ni[8].dn"
 		;
@@ -7172,7 +11798,7 @@ connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_Jnt_PageGrpL|Jnt_PageGroupL_top|jo
 connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_Jnt_PageGrpL|Jnt_PageGroupL_top|joint34|joint35|joint36.msg" "MayaNodeEditorSavedTabsInfo.tgi[2].ni[23].dn"
 		;
 connectAttr "joint31.msg" "MayaNodeEditorSavedTabsInfo.tgi[2].ni[24].dn";
-connectAttr "|PageGrp_L|grp_OFF_ctrl_PageGroup_L.msg" "MayaNodeEditorSavedTabsInfo.tgi[2].ni[25].dn"
+connectAttr "grp_OFF_ctrl_PageGroup_L.msg" "MayaNodeEditorSavedTabsInfo.tgi[2].ni[25].dn"
 		;
 connectAttr "nurbsPlane2FollicleShape5050.msg" "MayaNodeEditorSavedTabsInfo.tgi[2].ni[26].dn"
 		;
@@ -7197,7 +11823,7 @@ connectAttr "|PageGrp_L|ribbon|L1|LShape1.msg" "MayaNodeEditorSavedTabsInfo.tgi[
 		;
 connectAttr "nurbsPlane1FollicleShape3350.msg" "MayaNodeEditorSavedTabsInfo.tgi[2].ni[39].dn"
 		;
-connectAttr "|PageGrp_L|grp_OFF_ctrl_PageGroup_L|curve3|curveShape3.msg" "MayaNodeEditorSavedTabsInfo.tgi[2].ni[40].dn"
+connectAttr "ctrl_PageGroup_turn_LShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[2].ni[40].dn"
 		;
 connectAttr "nurbsPlane1Follicle9950.msg" "MayaNodeEditorSavedTabsInfo.tgi[2].ni[41].dn"
 		;
@@ -7249,29 +11875,254 @@ connectAttr "joint28.msg" "MayaNodeEditorSavedTabsInfo.tgi[2].ni[67].dn";
 connectAttr "joint26.msg" "MayaNodeEditorSavedTabsInfo.tgi[2].ni[68].dn";
 connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_Jnt_PageGrpL|Jnt_PageGroupL_Bot|joint38|joint39|joint40|joint41.msg" "MayaNodeEditorSavedTabsInfo.tgi[2].ni[69].dn"
 		;
-connectAttr "grp_jnt_PageGroup.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[0].dn"
+connectAttr "floatMath5.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[0].dn";
+connectAttr "Jnt_PageGroupL_top.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[1].dn"
 		;
-connectAttr "joint34_rotateZ1.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[1].dn"
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_Jnt_PageGrpL|Jnt_PageGroupL_top|joint34.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[2].dn"
 		;
-connectAttr "floatMath6.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[2].dn";
-connectAttr "ctrl_coverR.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[3].dn";
-connectAttr "floatMath5.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[4].dn";
-connectAttr "ctrl_coverRShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[5].dn"
+connectAttr "Jnt_PageGroupR_Bot.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[3].dn"
 		;
-connectAttr "Jnt_PageGroupL_top.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[6].dn"
+connectAttr "lyr_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[4].dn";
+connectAttr "ctrl_PageGroup_turn_RShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[5].dn"
 		;
-connectAttr "|PageGrp_L1|grp_OFF_ctrl_PageGroup_L|curve3.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[7].dn"
+connectAttr "Jnt_PageGroupR_top_rotateZ.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[6].dn"
 		;
-connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_Jnt_PageGrpL|Jnt_PageGroupL_top|joint34.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[8].dn"
+connectAttr "floatMath4.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[7].dn";
+connectAttr "floatMath6.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[8].dn";
+connectAttr "grp_jnt_PageGroup.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[9].dn"
 		;
-connectAttr "Jnt_PageGroupR_Bot.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[9].dn"
+connectAttr "ctrl_PageGroup_turn_R.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[10].dn"
 		;
-connectAttr "condition2.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[10].dn";
-connectAttr "floatMath4.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[11].dn";
-connectAttr "lyr_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[12].dn";
-connectAttr "|PageGrp_L1|grp_OFF_ctrl_PageGroup_L|curve3|curveShape3.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[13].dn"
+connectAttr "condition2.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[11].dn";
+connectAttr "joint34_rotateZ1.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[12].dn"
 		;
-connectAttr "Jnt_PageGroupR_top_rotateZ.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[14].dn"
+connectAttr "ctrl_coverRShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[13].dn"
+		;
+connectAttr "ctrl_coverR.msg" "MayaNodeEditorSavedTabsInfo.tgi[3].ni[14].dn";
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle50|grp_off_ctrl_PageGrp_R_p8|grp_cst_ctrl_PageGrp_R_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[0].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle50|grp_off_ctrl_PageGrp_R_p8|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4|ctrl_PageGrp_R_pShape4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[1].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle50|grp_off_ctrl_PageGrp_R_p8|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[2].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_R_p8.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[3].dn"
+		;
+connectAttr "joint53.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[4].dn";
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_Top|R1Follicle9950|grp_off_ctrl_PageGrp_R_p7|grp_cst_ctrl_PageGrp_R_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[5].dn"
+		;
+connectAttr "ctrl_PageGrp_R_p3.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[6].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_Top|R1Follicle8350|grp_off_ctrl_PageGrp_R_p6|grp_cst_ctrl_PageGrp_R_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[7].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_Top|R1Follicle1750|grp_off_ctrl_PageGrp_R_p2|grp_cst_ctrl_PageGrp_R_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[8].dn"
+		;
+connectAttr "ctrl_PageGrp_R_pShape2.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[9].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_Top|R1Follicle3350|grp_off_ctrl_PageGrp_R_p3|grp_cst_ctrl_PageGrp_R_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[10].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_R_p5.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[11].dn"
+		;
+connectAttr "ctrl_PageGrp_R_pShape3.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[12].dn"
+		;
+connectAttr "ctrl_PageGrp_R_p2.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[13].dn"
+		;
+connectAttr "ctrl_PageGrp_R_pShape7.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[14].dn"
+		;
+connectAttr "ctrl_PageGrp_R_pShape5.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[15].dn"
+		;
+connectAttr "ctrl_PageGrp_R_p6.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[16].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_R_p7.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[17].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_R_p4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[18].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_Top|R1Follicle5050|grp_off_ctrl_PageGrp_R_p4|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[19].dn"
+		;
+connectAttr "ctrl_PageGrp_R_p7.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[20].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_R_p6.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[21].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_R_p2.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[22].dn"
+		;
+connectAttr "ctrl_PageGrp_R_p5.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[23].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_Top|R1Follicle50|grp_off_ctrl_PageGrp_R_p1|grp_cst_ctrl_PageGrp_R_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[24].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_Top|R1Follicle5050|grp_off_ctrl_PageGrp_R_p4|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4|ctrl_PageGrp_R_pShape4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[25].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_Top|R1Follicle5050|grp_off_ctrl_PageGrp_R_p4|grp_cst_ctrl_PageGrp_R_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[26].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_R_p3.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[27].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_Top|R1Follicle6650|grp_off_ctrl_PageGrp_R_p5|grp_cst_ctrl_PageGrp_R_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[28].dn"
+		;
+connectAttr "ctrl_PageGrp_R_pShape6.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[29].dn"
+		;
+connectAttr "ctrl_PageGrp_R_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[30].dn"
+		;
+connectAttr "ctrl_PageGrp_R_pShape1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[31].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_R_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[32].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_R_p9.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[33].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle1750|grp_off_ctrl_PageGrp_R_p9|grp_cst_ctrl_PageGrp_R_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[34].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle1750|grp_off_ctrl_PageGrp_R_p9|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[35].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle1750|grp_off_ctrl_PageGrp_R_p9|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4|ctrl_PageGrp_R_pShape4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[36].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_R_p10.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[37].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle3350|grp_off_ctrl_PageGrp_R_p10|grp_cst_ctrl_PageGrp_R_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[38].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle3350|grp_off_ctrl_PageGrp_R_p10|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[39].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle3350|grp_off_ctrl_PageGrp_R_p10|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4|ctrl_PageGrp_R_pShape4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[40].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_R_p11.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[41].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle5050|grp_off_ctrl_PageGrp_R_p11|grp_cst_ctrl_PageGrp_R_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[42].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle5050|grp_off_ctrl_PageGrp_R_p11|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[43].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle5050|grp_off_ctrl_PageGrp_R_p11|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4|ctrl_PageGrp_R_pShape4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[44].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_R_p12.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[45].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle6650|grp_off_ctrl_PageGrp_R_p12|grp_cst_ctrl_PageGrp_R_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[46].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle6650|grp_off_ctrl_PageGrp_R_p12|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[47].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle6650|grp_off_ctrl_PageGrp_R_p12|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4|ctrl_PageGrp_R_pShape4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[48].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_R_p13.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[49].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle8350|grp_off_ctrl_PageGrp_R_p13|grp_cst_ctrl_PageGrp_R_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[50].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle8350|grp_off_ctrl_PageGrp_R_p13|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[51].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle8350|grp_off_ctrl_PageGrp_R_p13|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4|ctrl_PageGrp_R_pShape4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[52].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_R_p14.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[53].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle9950|grp_off_ctrl_PageGrp_R_p14|grp_cst_ctrl_PageGrp_R_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[54].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle9950|grp_off_ctrl_PageGrp_R_p14|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[55].dn"
+		;
+connectAttr "|PageGrp_R|grp_Jnt_PageGrpR|grp_jnt_ribbon_PageGrp_R_bot|L1Follicle9950|grp_off_ctrl_PageGrp_R_p14|grp_cst_ctrl_PageGrp_R_p1|ctrl_PageGrp_R_p4|ctrl_PageGrp_R_pShape4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[56].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_L_p8.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[57].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle50|grp_off_ctrl_PageGrp_L_p8|grp_cst_ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[58].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle50|grp_off_ctrl_PageGrp_L_p8|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[59].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle50|grp_off_ctrl_PageGrp_L_p8|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4|ctrl_PageGrp_R_pShape4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[60].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[61].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle50|grp_off_ctrl_PageGrp_L_p1|grp_cst_ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[62].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle50|grp_off_ctrl_PageGrp_L_p1|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[63].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle50|grp_off_ctrl_PageGrp_L_p1|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1|ctrl_PageGrp_L_pShape1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[64].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_L_p2.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[65].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle1750|grp_off_ctrl_PageGrp_L_p2|grp_cst_ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[66].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle1750|grp_off_ctrl_PageGrp_L_p2|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[67].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle1750|grp_off_ctrl_PageGrp_L_p2|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1|ctrl_PageGrp_L_pShape1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[68].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_L_p3.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[69].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle3350|grp_off_ctrl_PageGrp_L_p3|grp_cst_ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[70].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle3350|grp_off_ctrl_PageGrp_L_p3|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[71].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle3350|grp_off_ctrl_PageGrp_L_p3|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1|ctrl_PageGrp_L_pShape1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[72].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_L_p4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[73].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle5050|grp_off_ctrl_PageGrp_L_p4|grp_cst_ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[74].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle5050|grp_off_ctrl_PageGrp_L_p4|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[75].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle5050|grp_off_ctrl_PageGrp_L_p4|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1|ctrl_PageGrp_L_pShape1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[76].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_L_p5.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[77].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle6650|grp_off_ctrl_PageGrp_L_p5|grp_cst_ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[78].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle6650|grp_off_ctrl_PageGrp_L_p5|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[79].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle6650|grp_off_ctrl_PageGrp_L_p5|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1|ctrl_PageGrp_L_pShape1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[80].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_L_p6.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[81].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle8350|grp_off_ctrl_PageGrp_L_p6|grp_cst_ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[82].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle8350|grp_off_ctrl_PageGrp_L_p6|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[83].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle8350|grp_off_ctrl_PageGrp_L_p6|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1|ctrl_PageGrp_L_pShape1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[84].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_L_p7.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[85].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle9950|grp_off_ctrl_PageGrp_L_p7|grp_cst_ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[86].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle9950|grp_off_ctrl_PageGrp_L_p7|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[87].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Top|nurbsPlane2Follicle9950|grp_off_ctrl_PageGrp_L_p7|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_L_p1|ctrl_PageGrp_L_pShape1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[88].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_L_p9.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[89].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle1750|grp_off_ctrl_PageGrp_L_p9|grp_cst_ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[90].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle1750|grp_off_ctrl_PageGrp_L_p9|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[91].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle1750|grp_off_ctrl_PageGrp_L_p9|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4|ctrl_PageGrp_R_pShape4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[92].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_L_p10.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[93].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle3350|grp_off_ctrl_PageGrp_L_p10|grp_cst_ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[94].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle3350|grp_off_ctrl_PageGrp_L_p10|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[95].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle3350|grp_off_ctrl_PageGrp_L_p10|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4|ctrl_PageGrp_R_pShape4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[96].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_L_p11.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[97].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle5050|grp_off_ctrl_PageGrp_L_p11|grp_cst_ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[98].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle5050|grp_off_ctrl_PageGrp_L_p11|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[99].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle5050|grp_off_ctrl_PageGrp_L_p11|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4|ctrl_PageGrp_R_pShape4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[100].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_L_p12.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[101].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle6650|grp_off_ctrl_PageGrp_L_p12|grp_cst_ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[102].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle6650|grp_off_ctrl_PageGrp_L_p12|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[103].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle6650|grp_off_ctrl_PageGrp_L_p12|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4|ctrl_PageGrp_R_pShape4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[104].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_L_p13.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[105].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle8350|grp_off_ctrl_PageGrp_L_p13|grp_cst_ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[106].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle8350|grp_off_ctrl_PageGrp_L_p13|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[107].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle8350|grp_off_ctrl_PageGrp_L_p13|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4|ctrl_PageGrp_R_pShape4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[108].dn"
+		;
+connectAttr "grp_off_ctrl_PageGrp_L_p14.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[109].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle9950|grp_off_ctrl_PageGrp_L_p14|grp_cst_ctrl_PageGrp_L_p1.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[110].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle9950|grp_off_ctrl_PageGrp_L_p14|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[111].dn"
+		;
+connectAttr "|PageGrp_L|grp_jnt_PageGroup|grp_jnt_ribbon_PageGroupL_Bot|nurbsPlane1Follicle9950|grp_off_ctrl_PageGrp_L_p14|grp_cst_ctrl_PageGrp_L_p1|ctrl_PageGrp_R_p4|ctrl_PageGrp_R_pShape4.msg" "MayaNodeEditorSavedTabsInfo.tgi[4].ni[112].dn"
 		;
 connectAttr "condition1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "floatMath1.msg" ":defaultRenderUtilityList1.u" -na;
@@ -7288,8 +12139,8 @@ connectAttr "|PageGrp_L|GEOpageR|GEOpageRShape.iog" ":initialShadingGroup.dsm" -
 connectAttr "pageShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "|PageGrp_L|ribbon|L1|LShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "|PageGrp_L|ribbon|R1|RShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|PageGrp_L1|GEOpageR|GEOpageRShape.iog" ":initialShadingGroup.dsm" 
-		-na;
-connectAttr "|PageGrp_L1|ribbon|L1|LShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|PageGrp_L1|ribbon|R1|RShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "|PageGrp_R|GEOpageR|GEOpageRShape.iog" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "|PageGrp_R|ribbon|L1|LShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "|PageGrp_R|ribbon|R1|RShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of Book_type02.0003.ma
